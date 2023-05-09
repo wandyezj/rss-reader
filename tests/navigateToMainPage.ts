@@ -9,8 +9,8 @@ import { getRootDirectory } from "./getRootDirectory";
  */
 const useLocalDist = true;
 
-const mainPageUrl = "https://openchecklist.github.io/";
-export const mainPageTitle = "Website";
+const mainPageUrl = "https://wandyezj.github.io/rss-reader/";
+export const mainPageTitle = "RSS Reader";
 
 export async function navigateToMainPage(browser: Browser): Promise<Page> {
     // Create a separate browser context for each test
