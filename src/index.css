@@ -5,3 +5,10 @@ h1 {
 #insert {
     text-align: center;
 }
+
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 2%;
+  }

@@ -54,6 +54,14 @@ module.exports = async (env, options) => {
                         to: "robots.txt",
                         from: "./src/robots.txt",
                     },
+                    {
+                        to: "assets/logo.svg",
+                        from: "./logo/logo.svg",
+                    },
+                    {
+                        to: "favicon.png",
+                        from: "./logo/generated/logo-32.png",
+                    },
                 ],
             }),
         ],
