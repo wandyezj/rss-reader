@@ -59,8 +59,8 @@ module.exports = async (env, options) => {
                         from: "./logo/logo.svg",
                     },
                     {
-                        to: "favicon.png",
-                        from: "./logo/generated/logo-32.png",
+                        to: "favicon.ico",
+                        from: "./logo/generated/logo.ico",
                     },
                 ],
             }),
