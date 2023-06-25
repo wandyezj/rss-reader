@@ -1,6 +1,11 @@
 # Tech Stack
 
+- GitHub
+- [Git](https://git-scm.com/downloads)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [GitHub Desktop](https://desktop.github.com/)
 - [Node LTS](https://nodejs.org/en/download)
+- [TypeScript](https://www.typescriptlang.org/)
 - [Playwright](https://playwright.dev/)
 - [webpack](https://webpack.js.org/)
 
