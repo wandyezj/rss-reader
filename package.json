@@ -29,15 +29,17 @@
         "url": "https://github.com/wandyezj/website/issues"
     },
     "homepage": "https://github.com/wandyezj/website#readme",
-    "dependencies": {},
+    "dependencies": {
+        "mime": "^3.0.0"
+    },
     "devDependencies": {
         "@playwright/test": "^1.32.3",
         "@types/node": "^18.7.17",
-        "playwright": "^1.33.0",
-        "prettier": "^2.8.8",
         "clean-webpack-plugin": "^4.0.0",
         "copy-webpack-plugin": "^7.0.0",
         "html-webpack-plugin": "^5.5.0",
+        "playwright": "^1.33.0",
+        "prettier": "^2.8.8",
         "ts-loader": "^9.4.2",
         "typescript": "^5.0.4",
         "webpack": "^5.82.0",

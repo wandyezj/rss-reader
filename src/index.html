@@ -10,9 +10,14 @@
     </head>
     <body>
         <div>
-            <h1>RSS Reader</h1>
+            <h1>RSS Reader YO</h1>
         </div>
         <img src="assets/logo.svg" alt="RSS Reader Logo" id="logo" />
         <div id="insert"></div>
+        <script src="parser.js"></script>
+        <script>
+            const RSS_URL = 'https://feeds.npr.org/1001/rss.xml';
+            fetchAndParseRSS(RSS_URL);
+        </script>
     </body>
 </html>
