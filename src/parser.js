@@ -13,5 +13,3 @@ function fetchAndParseRSS(RSS_URL) {
       })
       .catch(error => console.error(error));
   }
-
-module.exports = parser;

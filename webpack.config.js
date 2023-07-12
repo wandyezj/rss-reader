@@ -55,6 +55,10 @@ module.exports = async (env, options) => {
                         from: "./src/robots.txt",
                     },
                     {
+                        to: "robots.txt",
+                        from: "C:/Users/Morpheus/WebstormProjects/rss-reader/src/parser.js",
+                    },
+                    {
                         to: "assets/logo.svg",
                         from: "./logo/logo.svg",
                     },

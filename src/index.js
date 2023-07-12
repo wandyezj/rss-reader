@@ -6,7 +6,7 @@ const app = express();
 const publicPath = path.join(__dirname, 'public');
 
 // Set the correct MIME type for JavaScript files
-mime.define({ 'application/javascript': ['js'] });
+//mime.define({ 'application/javascript': ['js'] });
 
 app.use(express.static(publicPath));
 
