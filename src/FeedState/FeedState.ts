@@ -38,3 +38,31 @@ export function refreshFeed(url: string, newItems: string[]): void {
         throw new Error("Feed not found");
     }
 }
+
+export function setActiveFeed(url: string): void {
+    const feed = state.feeds.find((feed) => feed.url === url);
+    if (feed) {
+        state.activeFeed = feed;
+    } else {
+        throw new Error("Feed not found");
+    }
+}
+
+export function markItemAsViewed(url: string, item: string): void {
+    const feed = state.feeds.find((feed) => feed.url === url);
+    if (feed) {
+        const index = feed.items.indexOf(item);
+        if (index > -1) {
+            feed.items.splice(index, 1); // this removes the item
+            // add any additional logic you need when an item is viewed
+        } else {
+            throw new Error("Item not found in feed");
+        }
+    } else {
+        throw new Error("Feed not found");
+    }
+}
+
+export function getFeedState(): FeedState {
+    return state;
+}

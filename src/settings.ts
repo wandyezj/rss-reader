@@ -1,6 +1,7 @@
 // src/components/Settings/Settings.ts
 
-import { downloadFile, uploadFile } from "../FileHandler";
+import { downloadFile } from "./FileHandler/fileDownload";
+import { uploadFile } from "./FileHandler/fileUpload";
 
 export function saveSettings(settings: any): void {
     if (typeof localStorage === "undefined") {
