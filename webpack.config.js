@@ -63,6 +63,18 @@ module.exports = async (env, options) => {
                         from: "./logo/logo.svg",
                     },
                     {
+                        to: "index.ts",
+                        from: "./src/index.ts",
+                    },
+                    {
+                        to: "parser.ts",
+                        from: "./src/parser.ts",
+                    },
+                    {
+                        to: "website.ts",
+                        from: "./src/website.ts",
+                    },
+                    {
                         to: "favicon.ico",
                         from: "./logo/generated/logo.ico",
                     },
