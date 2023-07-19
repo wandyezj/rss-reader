@@ -33,7 +33,7 @@
         "mime": "^3.0.0"
     },
     "devDependencies": {
-        "@playwright/test": "^1.32.3",
+        "@playwright/test": "^1.36.1",
         "@types/node": "^18.7.17",
         "clean-webpack-plugin": "^4.0.0",
         "copy-webpack-plugin": "^7.0.0",
