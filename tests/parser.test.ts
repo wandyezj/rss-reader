@@ -15,6 +15,7 @@ test("fetches and parses RSS", async ({ page }) => {
     expect(dateString && !isNaN(new Date(dateString).getTime())).toBeTruthy();
 
     const imageUrl = await firstArticle.$eval("img", (node) => node.getAttribute("src"));
+    console.log(`Image URL: ${imageUrl}`);
     expect(
         imageUrl &&
             (() => {
