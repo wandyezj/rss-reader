@@ -22,6 +22,7 @@ export async function navigateToMainPage(browser: Browser): Promise<Page> {
         // interceptor to replace content of the page
         page.route(mainPageUrl, (route, request) => {
             route.fulfill({
+                // need to make generic
                 body: getLocalDistIndexData(),
             });
         });

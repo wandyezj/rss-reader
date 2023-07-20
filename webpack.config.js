@@ -55,24 +55,12 @@ module.exports = async (env, options) => {
                         from: "./src/robots.txt",
                     },
                     {
-                        to: "./test-xml/feeds.npr.org_1001_rss.xml",
-                        from: "./test-xml/feeds.npr.org_1001_rss.xml",
+                        to: "./test-xml/npr.xml",
+                        from: "./test-xml/npr.xml",
                     },
                     {
                         to: "assets/logo.svg",
                         from: "./logo/logo.svg",
-                    },
-                    {
-                        to: "index.ts",
-                        from: "./src/index.ts",
-                    },
-                    {
-                        to: "parser.ts",
-                        from: "./src/parser.ts",
-                    },
-                    {
-                        to: "website.ts",
-                        from: "./src/website.ts",
                     },
                     {
                         to: "favicon.ico",

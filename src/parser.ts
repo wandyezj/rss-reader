@@ -1,35 +1,69 @@
-//const RSS_URL = 'https://feeds.npr.org/1001/rss.xml';
+export interface RssItem {
+    title?: string;
+    pubDate?: string;
+    image?: string;
+    description?: string;
+    link?: string;
+}
 
-//retrieve RSS feed from specified URL, processes response, logs parsed XML
-//data to console
-export function fetchAndParseRSS(RSS_URL: string) {
-    fetch(RSS_URL)
-        .then((response) => response.text())
-        .then((str) => new window.DOMParser().parseFromString(str, "text/xml"))
-        .then((data) => {
-            const insertDiv = document.getElementById("insert");
-            if (insertDiv != null) {
-                const items = data.getElementsByTagName("item");
-                for (let i = 0; i < items.length; i++) {
-                    const item = items[i];
-                    const title = item.getElementsByTagName("title")[0].textContent;
-                    const pubDate = item.getElementsByTagName("pubDate")[0].textContent;
-                    const image = item.getElementsByTagName("img")[0]?.getAttribute("src");
-                    const description = item.getElementsByTagName("description")[0].textContent;
-                    const link = item.getElementsByTagName("link")[0].textContent;
+//retrieve RSS feed from specified URL
 
-                    const articleDiv = document.createElement("div");
-                    articleDiv.innerHTML = `
-              <h3>${title}</h3>
-              <p>${pubDate}</p>
-              <img src="${image}" alt="Article Image">
-              <p>${description}</p>
-              <a href="${link}">Read More</a>
-            `;
+/**
+ * retrieve RSS feed from specified URL and parse it into RSS items
+ * @param rssUrl
+ * @returns
+ */
+export async function fetchAndParseRss(rssUrl: string): Promise<RssItem[]> {
+    const xml = await fetchRssXml(rssUrl);
+    const items = parseRss(xml);
+    return items;
+}
 
-                    insertDiv.appendChild(articleDiv);
-                }
-            }
-        })
-        .catch((error) => console.error(error));
+/**
+ *
+ * @param rssUrl url of rss to fetch
+ * @returns rss xml as string
+ */
+export async function fetchRssXml(rssUrl: string): Promise<string> {
+    const response = await fetch(rssUrl);
+    const text = await response.text();
+    return text;
+}
+
+/**
+ * Parse RSS XML into RSS items
+ * @param xml
+ * @returns list of rss items parsed from XML
+ */
+export function parseRss(xml: string): RssItem[] {
+    const data = new window.DOMParser().parseFromString(xml, "text/xml");
+
+    const items = data.getElementsByTagName("item");
+    const rssItems: RssItem[] = [];
+    for (let i = 0; i < items.length; i++) {
+        const item = items[i];
+
+        function getTagValue(item: Element, tagName: string): string | undefined {
+            const tag = item.getElementsByTagName(tagName)[0];
+            const value = tag.textContent || undefined;
+            return value;
+        }
+
+        // Parse individual items values
+        const title = getTagValue(item, "title");
+        const pubDate = getTagValue(item, "pubDate");
+        const image = item.getElementsByTagName("img")[0]?.getAttribute("src") || undefined;
+        const description = item.getElementsByTagName("description")[0].textContent || undefined;
+        const link = getTagValue(item, "link");
+
+        const rssItem: RssItem = {
+            title,
+            pubDate,
+            image,
+            description,
+            link,
+        };
+        rssItems.push(rssItem);
+    }
+    return rssItems;
 }

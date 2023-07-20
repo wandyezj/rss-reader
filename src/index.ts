@@ -2,7 +2,19 @@ import { website, clock } from "./website";
 clock();
 console.log(website());
 
-import { fetchAndParseRSS } from "./parser";
+import { RssItem, fetchAndParseRss } from "./parser";
 
-const RSS_URL = "test-xml/feeds.npr.org_1001_rss.xml";
-fetchAndParseRSS(RSS_URL);
+export let lastParsed: RssItem[] = [];
+async function test(testUrl: string) {
+    console.log("test");
+    //debugger;
+
+    const items = await fetchAndParseRss(testUrl);
+    console.log(items);
+    lastParsed = items;
+    return items;
+}
+
+//const testUrl = 'https://feeds.npr.org/1001/rss.xml';
+const testUrl = "test-xml/npr.xml";
+test(testUrl);
