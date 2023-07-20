@@ -55,6 +55,10 @@ module.exports = async (env, options) => {
                         from: "./src/robots.txt",
                     },
                     {
+                        to: "./test-xml/npr.xml",
+                        from: "./test-xml/npr.xml",
+                    },
+                    {
                         to: "assets/logo.svg",
                         from: "./logo/logo.svg",
                     },
