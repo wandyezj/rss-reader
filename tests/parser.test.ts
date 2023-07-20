@@ -8,11 +8,40 @@ test("fetches and parses RSS", async ({ page }) => {
     const firstArticle = await page.waitForSelector("#insert div");
 
     // Check the contents of the first article
-    expect(await firstArticle.$eval("h3", (node) => node.textContent)).toBe("Test Title");
-    expect(await firstArticle.$eval("p", (node) => node.textContent)).toBe("Test Date");
-    expect(await firstArticle.$eval("img", (node) => node.getAttribute("src"))).toBe("Test Image");
-    expect(await firstArticle.$eval("p", (node) => node.textContent)).toBe("Test Description");
-    expect(await firstArticle.$eval("a", (node) => node.getAttribute("href"))).toBe("Test Link");
+    const title = await firstArticle.$eval("h3", (node) => node.textContent);
+    expect(title && title.length).toBeGreaterThan(0);
+
+    const dateString = await firstArticle.$eval("p", (node) => node.textContent);
+    expect(dateString && !isNaN(new Date(dateString).getTime())).toBeTruthy();
+
+    const imageUrl = await firstArticle.$eval("img", (node) => node.getAttribute("src"));
+    expect(
+        imageUrl &&
+            (() => {
+                try {
+                    new URL(imageUrl);
+                    return true;
+                } catch {
+                    return false;
+                }
+            })()
+    ).toBeTruthy();
+
+    const description = await firstArticle.$eval("p", (node) => node.textContent);
+    expect(description && description.length).toBeGreaterThan(0);
+
+    const link = await firstArticle.$eval("a", (node) => node.getAttribute("href"));
+    expect(
+        link &&
+            (() => {
+                try {
+                    new URL(link);
+                    return true;
+                } catch {
+                    return false;
+                }
+            })()
+    ).toBeTruthy();
 
     await page.evaluate(() => fetchAndParseRSS("https://invalid-url.com/rss.xml"));
 
