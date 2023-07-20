@@ -4,8 +4,10 @@ import { fetchAndParseRSS } from "../src/parser";
 test("fetches and parses RSS", async ({ page }) => {
     await page.goto("http://localhost:8080");
 
-    // Call the fetchAndParseRSS function with a valid RSS URL
-    await page.evaluate(() => fetchAndParseRSS("https://feeds.npr.org/1001/rss.xml"));
+   // Convert the function to a string and pass it to page.evaluate()
+   await page.evaluate(`${fetchAndParseRSS.toString()};
+   fetchAndParseRSS("https://feeds.npr.org/1001/rss.xml");
+`);
 
     // Wait for the first article to be added to the DOM
     const firstArticle = await page.waitForSelector("#insert div");
