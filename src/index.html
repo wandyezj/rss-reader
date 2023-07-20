@@ -7,7 +7,6 @@
         <meta charset="UTF-8" />
         <link rel="stylesheet" type="text/css" href="./index.css" />
         <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-        <script src="/dist/parser.js"></script>
     </head>
     <body>
         <div>
@@ -15,11 +14,5 @@
         </div>
         <img src="assets/logo.svg" alt="RSS Reader Logo" id="logo" />
         <div id="insert"></div>
-        <!-- Call the fetchAndParseRSS function when the page loads -->
-        <script>
-            window.onload = function () {
-                fetchAndParseRSS("https://feeds.npr.org/1001/rss.xml");
-            };
-        </script>
     </body>
 </html>

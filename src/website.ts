@@ -4,7 +4,7 @@ export function website(): string {
 
 export function clock() {
     setInterval(() => {
-        const element = document.getElementById("notinsert");
+        const element = document.getElementById("insert");
         if (element) {
             element.innerText = Date.now().toString();
         }

@@ -39,7 +39,7 @@ export async function navigateToMainPage(browser: Browser): Promise<Page> {
 /**
  * Local generated page from build
  */
-const mainPageLocalDistDataPath = path.resolve(getRootDirectory(), "src", "index.html");
+const mainPageLocalDistDataPath = path.resolve(getRootDirectory(), "dist", "index.html");
 
 function getLocalDistIndexData() {
     if (!fs.existsSync(mainPageLocalDistDataPath)) {
