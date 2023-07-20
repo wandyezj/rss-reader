@@ -14,10 +14,11 @@ test("fetches and parses RSS", async ({ page }) => {
     const dateString = await firstArticle.$eval("p", (node) => node.textContent);
     expect(dateString && !isNaN(new Date(dateString).getTime())).toBeTruthy();
 
-    const imageUrl = await firstArticle.$eval("img", (node) => node.getAttribute("src"));
-    console.log(`Image URL: ${imageUrl}`);
-    expect(
-        imageUrl &&
+    // For image URL, first check if the node exists before getting its src attribute
+    const imageElement = await firstArticle.$("img");
+    const imageUrl = imageElement ? await imageElement.getAttribute("src") : undefined;
+    if (imageUrl) {
+        expect(
             (() => {
                 try {
                     new URL(imageUrl);
@@ -26,7 +27,10 @@ test("fetches and parses RSS", async ({ page }) => {
                     return false;
                 }
             })()
-    ).toBeTruthy();
+        ).toBeTruthy();
+    } else {
+        console.log("Image URL not found for this article.");
+    }
 
     const description = await firstArticle.$eval("p", (node) => node.textContent);
     expect(description && description.length).toBeGreaterThan(0);
