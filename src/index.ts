@@ -16,7 +16,7 @@ export async function test(testUrl: string) {
     console.log(items);
 
     // Map the parsed items to the format expected by addFeed and filter out any undefined values
-    const feedItems = items.map(item => item.title).filter((title): title is string => title !== undefined);
+    const feedItems = items.map((item) => item.title).filter((title): title is string => title !== undefined);
 
     // Add the feed data to the state
     addFeed(testUrl, feedItems);
