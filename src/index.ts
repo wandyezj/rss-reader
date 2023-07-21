@@ -6,7 +6,16 @@ import { displayFeeds } from "./UI/feedDisplay"; // Import displayFeeds from UI
 
 console.log(website());
 clock();
-console.log(website());
+
+function initialize() {
+    // Register button handlers
+    document.getElementById("button-add-feed")?.addEventListener("click", () => {
+        debugger;
+        addFeed("https://feeds.npr.org/1001/rss.xml");
+    });
+}
+
+initialize();
 
 export async function test(testUrl: string) {
     console.log("test");
@@ -37,6 +46,7 @@ const testUrl = "test-xml/npr.xml";
 test(testUrl);
 
 function test2() {
+    // How do we call these automatically?
     addFeed("https://feeds.npr.org/1001/rss.xml");
     setActiveFeed("https://feeds.npr.org/1001/rss.xml");
     markItemAsViewed("https://feeds.npr.org/1001/rss.xml", "Item 1");
