@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:nyt="http://www.nytimes.com/namespaces/rss/2.0" version="2.0">
+  <channel>
+    <title>NYT &gt; Top Stories</title>
+    <link>https://www.nytimes.com</link>
+    <atom:link href="https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml" rel="self" type="application/rss+xml"></atom:link>
+    <description></description>
+    <language>en-us</language>
+    <copyright>Copyright 2023 The New York Times Company</copyright>
+    <lastBuildDate>Wed, 26 Jul 2023 22:50:28 +0000</lastBuildDate>
+    <pubDate>Wed, 26 Jul 2023 22:36:43 +0000</pubDate>
+    <image>
+      <title>NYT &gt; Top Stories</title>
+      <url>https://static01.nyt.com/images/misc/NYT_logo_rss_250x40.png</url>
+      <link>https://www.nytimes.com</link>
+    </image>
+    <item>
+      <title>War Brought Putin Closer to Africa. Now It’s Pushing Them Apart.</title>
+      <link>https://www.nytimes.com/2023/07/26/world/africa/putin-africa-russia-war.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/world/africa/putin-africa-russia-war.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/world/africa/putin-africa-russia-war.html" rel="standout"></atom:link>
+      <description>As President Vladimir V. Putin of Russia prepares to host African leaders at a summit, a collapsed grain deal and the uncertain fate of Wagner mercenaries have cast a shadow.</description>
+      <dc:creator>Declan Walsh and Paul Sonne</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 14:27:51 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Mercenaries and Private Military Contractors</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Russian Invasion of Ukraine (2022)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Grain</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Embargoes and Sanctions</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Developing Countries</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">African Union</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Wagner Group</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Putin, Vladimir V</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Africa</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Russia</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/26/multimedia/26russia-africa-01-mfpt/26russia-africa-01-mfpt-moth.jpg" width="151"></media:content>
+      <media:credit>Pool photo by Sergei Chirikov</media:credit>
+      <media:description>President Vladimir V. Putin with heads of African countries at a summit in Sochi, Russia, in 2019.</media:description>
+    </item>
+    <item>
+      <title>Biden Orders U.S. to Share Evidence of Russian War Crimes With Hague Court</title>
+      <link>https://www.nytimes.com/2023/07/26/us/politics/biden-russia-war-crimes-hague.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/us/politics/biden-russia-war-crimes-hague.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/us/politics/biden-russia-war-crimes-hague.html" rel="standout"></atom:link>
+      <description>The step signals a major shift in American policy and ends months of resistance by Pentagon officials who feared setting a precedent that could pave the way for the court to prosecute U.S. troops.</description>
+      <dc:creator>Charlie Savage</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 22:00:48 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Defense Department</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">International Criminal Court</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">National Security Council</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Security Council (UN)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Senate Committee on the Judiciary</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Austin, Lloyd J III</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Bellinger, John B III</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Biden, Joseph R Jr</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Clinton, Bill</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Blinken, Antony J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Khan, Karim (1970- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Putin, Vladimir V</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Hague (Netherlands)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Yugoslavia</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/26/multimedia/26dc-warcrimes-02-ktbc/26dc-warcrimes-02-ktbc-moth.jpg" width="151"></media:content>
+      <media:credit>Desiree Rios for The New York Times</media:credit>
+      <media:description>President Biden at the White House on Tuesday. In recent days, he ordered the government to begin sharing evidence of Russian war crimes with the International Criminal Court.</media:description>
+    </item>
+    <item>
+      <title>Here’s What Happened When Hunter Biden Went to Court With a Plea Deal</title>
+      <link>https://www.nytimes.com/2023/07/26/us/politics/hunter-biden-plea-deal.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/us/politics/hunter-biden-plea-deal.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/us/politics/hunter-biden-plea-deal.html" rel="standout"></atom:link>
+      <description>In just a few hours, Judge Maryellen Noreika exposes a gulf in understanding between the president’s son and prosecutors on an agreement they had spent weeks hashing out.</description>
+      <dc:creator>Glenn Thrush and Chris Cameron</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 21:49:02 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Justice Department</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Biden, Hunter</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Immunity from Prosecution</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/26/multimedia/26hunter-biden-judge-questions-topart-hmcb/26hunter-biden-judge-questions-topart-hmcb-moth.jpg" width="151"></media:content>
+      <media:credit>Kenny Holston/The New York Times</media:credit>
+      <media:description>Hunter Biden appeared at the courthouse in the J. Caleb Boggs Federal Building in Wilmington, Del., on Wednesday. </media:description>
+    </item>
+    <item>
+      <title>Fed Raises Rates After a Pause and Leaves Door Open to More</title>
+      <link>https://www.nytimes.com/2023/07/26/business/fed-meeting-interest-rate-powell.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/business/fed-meeting-interest-rate-powell.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/business/fed-meeting-interest-rate-powell.html" rel="standout"></atom:link>
+      <description>Federal Reserve officials lifted borrowing costs by a quarter-point after pausing in June. Rates could rise more, but the central bank is not ready to commit.</description>
+      <dc:creator>Jeanna Smialek</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 21:51:45 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Economy</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Interest Rates</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Inflation (Economics)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Prices (Fares, Fees and Rates)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Labor and Jobs</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Consumer Behavior</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Federal Reserve System</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Powell, Jerome H</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/25/multimedia/2023-07-25-fed-target-rate-index/2023-07-25-fed-target-rate-index-moth-v8.png" width="151"></media:content>
+    </item>
+    <item>
+      <title>Sinead O’Connor, Evocative and Outspoken Singer, Is Dead at 56</title>
+      <link>https://www.nytimes.com/2023/07/26/arts/music/sinead-oconnor-dead.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/arts/music/sinead-oconnor-dead.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/arts/music/sinead-oconnor-dead.html" rel="standout"></atom:link>
+      <description>She broke out with the single “Nothing Compares 2 U,” then caused an uproar a few years later by ripping up a photo of Pope John Paul II on “S.N.L.”</description>
+      <dc:creator>Ben Sisario and Joe Coscarelli</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 21:41:38 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">O&#39;Connor, Sinead</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Deaths (Obituaries)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Pop and Rock Music</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Ireland</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_ttl">Saturday Night Live (TV Program)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_ttl">Nothing Compares 2 U (Song)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_ttl">I Do Not Want What I Haven&#39;t Got (Album)</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/26/obituaries/26OConnor/26OConnor-moth.jpg" width="151"></media:content>
+      <media:credit>Frans Schellekens/Redferns, via Getty Images</media:credit>
+      <media:description>Sinead O’Connor performing in 1988. She rarely shrank from controversy, though it often came with consequences for her career.</media:description>
+    </item>
+    <item>
+      <title>The Bald Power of Sinead O’Connor</title>
+      <link>https://www.nytimes.com/2023/07/26/style/sinead-oconnor-bald-power.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/style/sinead-oconnor-bald-power.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/style/sinead-oconnor-bald-power.html" rel="standout"></atom:link>
+      <description>The Irish singer’s shaved head was as much a part of her identity and allure as her sound.</description>
+      <dc:creator>Vanessa Friedman</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 22:00:53 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Pop and Rock Music</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Baldness</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Hair</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Music</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Women and Girls</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">O&#39;Connor, Sinead</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/26/multimedia/26SINEAD-BALD-APPRECIATION-01-gblh/26SINEAD-BALD-APPRECIATION-01-gblh-moth.jpg" width="151"></media:content>
+      <media:credit>Independent Newspapers Ireland/Getty Images</media:credit>
+      <media:description>Sinead O’Connor performing at the Olympic Ballroom in 1988.</media:description>
+    </item>
+    <item>
+      <title>Sinead O’Connor’s Life in Pictures</title>
+      <link>https://www.nytimes.com/2023/07/26/arts/music/sinead-oconnor-photos-life.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/arts/music/sinead-oconnor-photos-life.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/arts/music/sinead-oconnor-photos-life.html" rel="standout"></atom:link>
+      <description>The Irish singer had an evocative voice and cast a powerful silhouette onstage.</description>
+      <dc:creator>The New York Times</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 22:14:00 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">O&#39;Connor, Sinead</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Music</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/26/multimedia/26SINEAD-PHOTO-08-hvft/26SINEAD-PHOTO-08-hvft-moth.jpg" width="151"></media:content>
+      <media:credit>John Stoddart/Popperfoto via Getty Images</media:credit>
+      <media:description>Sinead O’Connor in 1994, several years after she won a Grammy for “I Do Not Want What I Haven’t Got.”</media:description>
+    </item>
+    <item>
+      <title>Mitch McConnell Freezes Midsentence in News Conference at Capitol</title>
+      <link>https://www.nytimes.com/2023/07/26/us/politics/mitch-mcconnell-freezes-news-conference.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/us/politics/mitch-mcconnell-freezes-news-conference.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/us/politics/mitch-mcconnell-freezes-news-conference.html" rel="standout"></atom:link>
+      <description>The 81-year-old Senate Republican leader, who had a serious fall earlier this year, was temporarily unable to speak during a news conference, raising questions about his health and future.</description>
+      <dc:creator>Carl Hulse</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 21:52:58 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Elderly</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Falls</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Senate</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">McConnell, Mitch</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/26/multimedia/26dc-mcconnell-01-bjtg/26dc-mcconnell-01-bjtg-moth.jpg" width="151"></media:content>
+      <media:credit>Sarah Silbiger for The New York Times</media:credit>
+      <media:description>Senator Mitch McConnell is supported by colleagues during his weekly news conference at the Capitol on Wednesday.</media:description>
+    </item>
+    <item>
+      <title>Giuliani Concedes He Made False Statements About Georgia Election Workers</title>
+      <link>https://www.nytimes.com/2023/07/26/us/politics/giuliani-georgia-election-workers.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/us/politics/giuliani-georgia-election-workers.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/us/politics/giuliani-georgia-election-workers.html" rel="standout"></atom:link>
+      <description>Rudolph W. Giuliani said he still had “legal defenses” in a case brought by two election workers who said he had defamed them as he asserted that the 2020 election was marred by fraud.</description>
+      <dc:creator>Alan Feuer</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 14:24:55 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Giuliani, Rudolph W</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Freeman, Ruby</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Moss, Shaye</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Fulton County (Ga)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Election of 2020</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Libel and Slander</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Suits and Litigation (Civil)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/26/multimedia/26dc-rudy-01-pgqt/26dc-rudy-01-pgqt-moth.jpg" width="151"></media:content>
+      <media:credit>Nicole Craine for The New York Times</media:credit>
+      <media:description>The defamation suit is only one of several legal problems Rudolph W. Giuliani faces.</media:description>
+    </item>
+    <item>
+      <title>Where Is Melania Trump Now?</title>
+      <link>https://www.nytimes.com/2023/07/26/us/politics/melania-trump-2024-campaign.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/us/politics/melania-trump-2024-campaign.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/us/politics/melania-trump-2024-campaign.html" rel="standout"></atom:link>
+      <description>The former first lady has mostly retreated from public view — and steered clear of the campaign trail — while her husband fights to return to the White House and faces increasing legal peril.</description>
+      <dc:creator>Lisa Lerer and Katie Rogers</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 14:19:32 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Melania</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Bush, Laura</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Clinton, Hillary Rodham</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Obama, Michelle</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">DeSantis, Casey</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Carroll, E Jean</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Grisham, Stephanie</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Election of 2024</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Federal Criminal Case Against Trump (Documents Case)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Nonfungible Tokens (NFTs)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">internal-sub-only</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/24/us/politics/00pol-melania2/00pol-melania2-moth.jpg" width="151"></media:content>
+      <media:credit>James Devaney/GC Images, via Getty Images</media:credit>
+      <media:description>In her post-presidential life, Melania Trump has pursued what she could not get in the White House: a sense of privacy.</media:description>
+    </item>
+    <item>
+      <title>How and Why Illegal Border Crossings Have Dropped So Dramatically</title>
+      <link>https://www.nytimes.com/2023/07/26/us/politics/immigration-illegal-border-crossings.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/us/politics/immigration-illegal-border-crossings.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/us/politics/immigration-illegal-border-crossings.html" rel="standout"></atom:link>
+      <description>The Biden administration’s new asylum policy, which a judge blocked this week, has contributed to a plunge in illegal border crossings at the southern U.S. border.</description>
+      <dc:creator>Michael D. Shear, Julie Turkewitz and Edgar Sandoval</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 22:02:13 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Illegal Immigration</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Decisions and Verdicts</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Asylum, Right of</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Immigration and Emigration</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Tigar, Jon S</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Biden, Joseph R Jr</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Darien Gap</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">McAllen (Tex)</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/26/multimedia/26dc-immig-01a-tqvz/26dc-immig-01a-tqvz-moth.jpg" width="151"></media:content>
+      <media:credit>Mark Abramson for The New York Times</media:credit>
+      <media:description>A migrant camp between the border walls that separate San Diego from Tijuana, Mexico, on May 11 when President Biden’s asylum changes took effect.</media:description>
+    </item>
+    <item>
+      <title>101°F in the Ocean Off Florida: Was It a World Record?</title>
+      <link>https://www.nytimes.com/2023/07/26/climate/florida-100-degree-water.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/climate/florida-100-degree-water.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/climate/florida-100-degree-water.html" rel="standout"></atom:link>
+      <description>Measuring and comparing sea surface temperatures is complex, but scientists agree on one thing: A high reading this week is bad news for wildlife.</description>
+      <dc:creator>Hiroko Tabuchi</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 21:42:00 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Oceans and Seas</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Heat and Heat Waves</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Records and Achievements</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Florida</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Fish and Other Marine Life</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Reefs</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Global Warming</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/26/multimedia/26cli-hotocean-pzgb/26cli-hotocean-pzgb-moth.jpg" width="151"></media:content>
+      <media:credit>Alfonso Duran for The New York Times</media:credit>
+      <media:description>Just off the shore in Florida. Many parts of the country have broken or tied temperature records this month.</media:description>
+    </item>
+    <item>
+      <title>Blistering Heat Spreads to U.S. Midwest as Wildfire Smoke Lingers</title>
+      <link>https://www.nytimes.com/2023/07/26/us/heat-wave-air-quality-smoke-midwest.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/us/heat-wave-air-quality-smoke-midwest.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/us/heat-wave-air-quality-smoke-midwest.html" rel="standout"></atom:link>
+      <description>Midwestern residents sweltered in the heat wave that has scorched the South and Southwest for many days.</description>
+      <dc:creator>Julie Bosman</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 20:40:51 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Heat and Heat Waves</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Weather</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">States (US)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Wildfires</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Corn</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Kansas City (Mo)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Midwestern States (US)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Air Conditioning</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Heatstroke</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/26/multimedia/26nat-midwest-heat-01-ljhw/26nat-midwest-heat-01-ljhw-moth.jpg" width="151"></media:content>
+      <media:credit>Chase Castor for The New York Times</media:credit>
+      <media:description>A construction worker used a tarpaulin as a makeshift shade on Tuesday at the River Market in Kansas City, Mo., where a heat advisory was in effect. </media:description>
+    </item>
+    <item>
+      <title>Why Won’t Simon Ateba Stop Shouting?</title>
+      <link>https://www.nytimes.com/2023/07/26/style/simon-ateba-white-house-today-news-africa.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/style/simon-ateba-white-house-today-news-africa.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/style/simon-ateba-white-house-today-news-africa.html" rel="standout"></atom:link>
+      <description>The Today News Africa gadfly has become a hero on the right, thanks to his confrontational behavior in the White House briefing room.</description>
+      <dc:creator>Joseph Bernstein</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 12:00:18 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Today News Africa</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Ateba, Simon</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">White House Correspondents Assn</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">internal-sub-only</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">News and News Media</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Jean-Pierre, Karine</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Psaki, Jennifer R</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Cameroon</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Africa</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Content Type: Personal Profile</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/21/multimedia/ATEBA-01-jclt/ATEBA-01-jclt-moth.jpg" width="151"></media:content>
+      <media:credit>Doug Mills/The New York Times</media:credit>
+      <media:description>Simon Ateba, center, wearing a purple tie.</media:description>
+    </item>
+    <item>
+      <title>Is Miami English, Heavily Influenced by Spanish, a Dialect? </title>
+      <link>https://www.nytimes.com/2023/07/26/us/miami-dialect-english-spanish.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/us/miami-dialect-english-spanish.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/us/miami-dialect-english-spanish.html" rel="standout"></atom:link>
+      <description>A linguistics professor found that even Miamians who aren’t fluent in Spanish use or understand phrases that are direct translations.</description>
+      <dc:creator>Patricia Mazzei</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 22:36:43 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Miami (Fla)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">English Language</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Language and Languages</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/24/multimedia/00nat-miami-language-01-lcwm/00nat-miami-language-01-lcwm-moth.jpg" width="151"></media:content>
+      <media:credit>Alfonso Duran for The New York Times</media:credit>
+      <media:description>South Pointe Park in Miami Beach this month. People went, as many Miamians might say, irregardless of the heat.</media:description>
+    </item>
+    <item>
+      <title>Kevin Spacey Is Acquitted of Sexual Assault Charges</title>
+      <link>https://www.nytimes.com/2023/07/26/arts/kevin-spacey-verdict-not-guilty.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/arts/kevin-spacey-verdict-not-guilty.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/arts/kevin-spacey-verdict-not-guilty.html" rel="standout"></atom:link>
+      <description>A British jury on Wednesday found the actor not guilty of nine charges.</description>
+      <dc:creator>Alex Marshall</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 16:06:27 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Spacey, Kevin</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Sexual Harassment</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Sex Crimes</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">London (England)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Decisions and Verdicts</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">vis-video</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/27/multimedia/26SPACEY-VERDICT02-ckbq/26SPACEY-VERDICT02-ckbq-moth.jpg" width="151"></media:content>
+      <media:credit>Susannah Ireland/Reuters</media:credit>
+      <media:description>“I am humbled by the outcome,” Kevin Spacey told reporters outside the courthouse on Wednesday.</media:description>
+    </item>
+    <item>
+      <title>At Congressional Hearing on UFOs, Lawmakers Press for Answers</title>
+      <link>https://www.nytimes.com/2023/07/26/us/politics/ufo-hearing.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/us/politics/ufo-hearing.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/us/politics/ufo-hearing.html" rel="standout"></atom:link>
+      <description>Pentagon officials have said most reported incidents involved items like airborne trash, weather balloons and drones.</description>
+      <dc:creator>Helene Cooper</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 20:49:12 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Extraterrestrial Life</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Unidentified Flying Objects (UFO)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Defense Department</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">House Committee on Oversight and Government Reform</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/26/multimedia/26dc-ufos-01-vwmf/26dc-ufos-01-vwmf-moth.jpg" width="151"></media:content>
+      <media:credit>Sarah Silbiger for The New York Times</media:credit>
+      <media:description>David Grusch, center, a former intelligence official who worked with the Pentagon’s task force looking into unidentified aerial phenomena, testified about alleged U.F.O. materials at Wednesday’s hearing.</media:description>
+    </item>
+    <item>
+      <title>Looming Retraction Casts Shadow Over Ranga Dias and Study of Superconductors</title>
+      <link>https://www.nytimes.com/2023/07/26/science/ranga-dias-retraction-physics.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/science/ranga-dias-retraction-physics.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/science/ranga-dias-retraction-physics.html" rel="standout"></atom:link>
+      <description>Misconduct allegations are leading scientists to question the work of Ranga Dias, including his claimed discovery of a room-temperature superconductor.</description>
+      <dc:creator>Kenneth Chang</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 19:30:30 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Dias, Ranga P</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Falsification of Data</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Superconductors</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Physics</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Physical Review Letters</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Ethics and Official Misconduct</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Research</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Chemistry</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">University of Rochester</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">University of Nevada, Las Vegas</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/26/multimedia/26sci-retraction-01-mfgt/26sci-retraction-01-mfgt-moth.jpg" width="151"></media:content>
+      <media:credit>Lauren Petracca for The New York Times</media:credit>
+      <media:description>Ranga P. Dias, a professor of mechanical engineering and physics at the University of Rochester in New York.</media:description>
+    </item>
+    <item>
+      <title>After Fatal Ship Fire, Newark Mayor Wants Special Port Unit</title>
+      <link>https://www.nytimes.com/2023/07/26/nyregion/newark-ship-fire-response.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/nyregion/newark-ship-fire-response.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/nyregion/newark-ship-fire-response.html" rel="standout"></atom:link>
+      <description>Mayor Ras J. Baraka said he had begun discussions with the Port Authority and Coast Guard about creating a special team to battle shipboard fires.</description>
+      <dc:creator>Patrick McGeehan</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 21:51:32 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Newark (NJ)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Fires and Firefighters</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Port Authority of New York and New Jersey</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">United States Coast Guard</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Baraka, Ras</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/26/multimedia/newark-fire-01-gkvb/newark-fire-01-gkvb-moth.jpg" width="151"></media:content>
+      <media:credit>Andres Kudacki for The New York Times</media:credit>
+      <media:description>The Newark Fire Academy held a graduation ceremony on Wednesday. Nine graduates will work for the Newark Fire Department; the others will go to other departments in the region. The Newark fire chief said he intended to hire 50 new firefighters this year. </media:description>
+    </item>
+    <item>
+      <title>Democrats and Republicans Are Living in Different Worlds</title>
+      <link>https://www.nytimes.com/2023/07/26/opinion/masculinity-gender-gap-2024.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/opinion/masculinity-gender-gap-2024.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/opinion/masculinity-gender-gap-2024.html" rel="standout"></atom:link>
+      <description>How you view the crisis of men and boys — and whether you think there is one — is just one of the ways you reveal your political leanings.</description>
+      <dc:creator>Thomas B. Edsall</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 19:31:08 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Election of 2024</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Midterm Elections (2022)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Polls and Public Opinion</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Men and Boys</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Generation Z</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">OxyContin (Drug)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Opioids and Opiates</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Republican Party</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Democratic Party</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Biden, Joseph R Jr</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/26/multimedia/26edsall-wvmh/26edsall-wvmh-moth.jpg" width="151"></media:content>
+      <media:credit>Luke Sharrett for The New York Times</media:credit>
+    </item>
+    <item>
+      <title>In Israel, the Hobbling of the Supreme Court Is Just the Start</title>
+      <link>https://www.nytimes.com/2023/07/26/opinion/international-world/israel-supreme-court-protest.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/opinion/international-world/israel-supreme-court-protest.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/opinion/international-world/israel-supreme-court-protest.html" rel="standout"></atom:link>
+      <description>The right-wing coalition’s hobbling of the Supreme Court is just the start of a campaign against the country’s democratic foundations.</description>
+      <dc:creator>Adam Shinar</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 16:14:46 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Israel</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Netanyahu, Benjamin</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Democracy (Theory and Philosophy)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Courts and the Judiciary</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Ben-Gvir, Itamar</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Demonstrations, Protests and Riots</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Jews and Judaism</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/26/multimedia/26Shinar-pqgv/26Shinar-pqgv-moth.jpg" width="151"></media:content>
+      <media:credit>Amir Cohen/Reuters</media:credit>
+      <media:description>A protest near the Israeli Parliament in Jerusalem on Monday after lawmakers passed a bill restricting the courts. </media:description>
+    </item>
+    <item>
+      <title>Business Is Betting That Consumers Have Gotten Used to High Prices</title>
+      <link>https://www.nytimes.com/2023/07/26/opinion/inflation-greedflation-prices-profits.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/opinion/inflation-greedflation-prices-profits.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/opinion/inflation-greedflation-prices-profits.html" rel="standout"></atom:link>
+      <description>Prices that go up don’t necessarily have to come down.</description>
+      <dc:creator>Peter Coy</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 19:00:02 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">internal-sub-only-nl</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Inflation (Economics)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Corporations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Supply Chain</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Economics (Theory and Philosophy)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Prices (Fares, Fees and Rates)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Sherwin-Williams Company</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/26/opinion/26coy-image/26coy-image-moth.jpg" width="151"></media:content>
+      <media:credit>Illustration by Sam Whitney/The New York Times; images by CSA Images/Getty Images</media:credit>
+    </item>
+    <item>
+      <title>‘Oppenheimer’ and the Siren Song of World-Ending Technology</title>
+      <link>https://www.nytimes.com/2023/07/26/opinion/oppenheimer-nuclear-weapons-artificial-intelligence.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/opinion/oppenheimer-nuclear-weapons-artificial-intelligence.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/opinion/oppenheimer-nuclear-weapons-artificial-intelligence.html" rel="standout"></atom:link>
+      <description>The story is a warning. Will we heed it?</description>
+      <dc:creator>Michelle Cottle, Ross Douthat, Carlos Lozada and Lydia Polgreen</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 20:09:47 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Oppenheimer, J Robert</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Nuclear Weapons</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Movies</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_ttl">Oppenheimer (Movie)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Nolan, Christopher</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Artificial Intelligence</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States International Relations</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/26/opinion/26moo-oppenheimer-art/26moo-oppenheimer-art-moth.jpg" width="151"></media:content>
+      <media:credit>Illustration by The New York Times; photograph by Joe Raedle/Getty</media:credit>
+    </item>
+    <item>
+      <title>When Will the Rate Hikes End?</title>
+      <link>https://www.nytimes.com/2023/07/26/briefing/fed-rate-hike-sinead-oconnor.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/briefing/fed-rate-hike-sinead-oconnor.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/briefing/fed-rate-hike-sinead-oconnor.html" rel="standout"></atom:link>
+      <description>Also, a new phase of Ukraine’s offensive. Here’s the latest at the end of Wednesday.</description>
+      <dc:creator>Matthew Cullen</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 21:56:25 +0000</pubDate>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/26/multimedia/26evening-nl-pgjc/26evening-nl-pgjc-moth.jpg" width="151"></media:content>
+      <media:credit>Source: Federal Reserve. By Karl Russell</media:credit>
+      <media:description>Note: The rate since December 2008 is the upper limit of the federal funds target range.</media:description>
+    </item>
+    <item>
+      <title>Bo Goldman, Oscar-Winning Screenwriter, Dies at 90</title>
+      <link>https://www.nytimes.com/2023/07/26/movies/bo-goldman-dead.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/movies/bo-goldman-dead.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/movies/bo-goldman-dead.html" rel="standout"></atom:link>
+      <description>He was a struggling writer when he won an Academy Award for “One Flew Over the Cuckoo’s Nest.” He won another for “Melvin and Howard.”</description>
+      <dc:creator>Neil Genzlinger</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 20:02:52 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Goldman, Bo</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Deaths (Obituaries)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Movies</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Writing and Writers</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Academy Awards (Oscars)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_ttl">One Flew Over the Cuckoo&#39;s Nest (Movie)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_ttl">Melvin and Howard (Movie)</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/27/obituaries/26Goldman1-print1/26Goldman1-print1-moth-v2.jpg" width="151"></media:content>
+      <media:credit>ABC Photo Archives/Disney, via Getty Images</media:credit>
+      <media:description>The screenwriter Bo Goldman at the 1976 Academy Awards, accepting the award for his work on “One Flew Over the Cuckoo’s Nest.”</media:description>
+    </item>
+    <item>
+      <title>White House Condemns Fox News Over Greg Gutfeld’s Holocaust Comments</title>
+      <link>https://www.nytimes.com/2023/07/26/business/white-house-fox-news-holocaust.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/business/white-house-fox-news-holocaust.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/business/white-house-fox-news-holocaust.html" rel="standout"></atom:link>
+      <description>In a debate over Florida’s African American history curriculum, Greg Gutfeld said Jews in Nazi concentration camps “had to be useful” to survive, remarks that the White House called “an obscenity.”</description>
+      <dc:creator>Jeremy W. Peters</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 21:42:04 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Television</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Holocaust and the Nazi Era</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">News and News Media</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Fox News Channel</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Gutfeld, Greg</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/26/multimedia/26whitehouse-fox-Gutfeld-jthf/26whitehouse-fox-Gutfeld-jthf-moth.jpg" width="151"></media:content>
+      <media:credit>Amy Lombard for The New York Times</media:credit>
+      <media:description>Greg Gutfeld took over the 10 p.m. time slot at Fox News last week.</media:description>
+    </item>
+    <item>
+      <title>Video: Crane Partially Collapses in NYC Injuring 11</title>
+      <link>https://www.nytimes.com/2023/07/26/nyregion/crane-collapse-nyc-hudson-yards.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/nyregion/crane-collapse-nyc-hudson-yards.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/nyregion/crane-collapse-nyc-hudson-yards.html" rel="standout"></atom:link>
+      <description>Nine civilians and two firefighters were hurt when the crane on 10th Avenue collapsed, officials said.</description>
+      <dc:creator>Lola Fadulu and Amanda Holpuch</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 21:25:20 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Hudson Yards (Manhattan, NY)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Fires and Firefighters</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Building (Construction)</category>
+    </item>
+    <item>
+      <title>This Hummus Holds Up After 800 Years</title>
+      <link>https://www.nytimes.com/2023/07/26/magazine/ancient-hummus-recipe.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/07/26/magazine/ancient-hummus-recipe.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/07/26/magazine/ancient-hummus-recipe.html" rel="standout"></atom:link>
+      <description>First written down in the 13th century, this recipe has an enduring simplicity — but no garlic.</description>
+      <dc:creator>Ligaya Mishan</dc:creator>
+      <pubDate>Wed, 26 Jul 2023 17:49:56 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Recipes</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Cooking and Cookbooks</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Hummus</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Garlic</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Chickpeas</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Rumi (Poet)</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/07/30/magazine/30mag-Eat/30mag-Eat-moth.jpg" width="151"></media:content>
+      <media:credit>Chris Simpson for The New York Times. Food stylist: Maggie Ruggiero. Prop stylist: Sophia Pappas.</media:credit>
+    </item>
+  </channel>
+</rss>
