@@ -66,3 +66,5 @@ export function markItemAsViewed(url: string, item: string): void {
 export function getFeedState(): FeedState {
     return state;
 }
+
+export { Feed };

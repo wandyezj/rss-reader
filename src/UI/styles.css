@@ -105,7 +105,7 @@ body {
 
 .article-list {
     flex-basis: 65%;
-    display: flex;
+    display: flex; /* Change to display flex */
     flex-wrap: wrap;
     justify-content: space-between;
 }

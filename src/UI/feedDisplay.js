@@ -1,35 +1,29 @@
-import { RssItem, fetchAndParseRss } from "../parser";
-import { addFeed, getFeedState, Feed } from "../FeedState/FeedState";
-
-async function displayFeeds(RSS_URL: string): Promise<void> {
+import { fetchAndParseRss } from "../parser";
+import { addFeed, getFeedState } from "../FeedState/FeedState";
+async function displayFeeds(RSS_URL) {
     console.log("Loading");
     try {
         // Fetch and parse the RSS feed using the parser
-        const rssItems: RssItem[] = await fetchAndParseRss(RSS_URL);
-
+        const rssItems = await fetchAndParseRss(RSS_URL);
         // Prepare data for FeedState
         const feedUrl = RSS_URL; // URL of the feed
-        const feedItems: string[] = rssItems.map((item) => item.title || "");
-
+        const feedItems = rssItems.map((item) => item.title || "");
         // Add the feed to the FeedState
         addFeed(feedUrl, feedItems);
-
         // Get the updated feed state
         const feedState = getFeedState();
-
         // Update the HTML with the new feed items and the expanded article
         displayFeedItems(feedState.feeds);
         displayExpandedArticle(feedState.feeds[0], feedState.feeds[0].items[0]); // Assuming the first feed and its first item are selected by default
-    } catch (error) {
+    }
+    catch (error) {
         console.error("Error displaying feed data:", error);
     }
 }
-
-function displayFeedItems(feeds: Feed[]): void {
+function displayFeedItems(feeds) {
     const articleListElement = document.querySelector(".article-items");
     if (articleListElement) {
         articleListElement.innerHTML = ""; // Clear existing items
-
         // Loop through the feed items and create list items for each
         feeds.forEach((feed) => {
             feed.items.forEach((item) => {
@@ -39,34 +33,29 @@ function displayFeedItems(feeds: Feed[]): void {
                 link.textContent = item;
                 listItem.appendChild(link);
                 articleListElement.appendChild(listItem);
-
                 // Add click event listener to display the selected article on click
                 link.addEventListener("click", () => displayExpandedArticle(feed, item));
             });
         });
     }
 }
-
-function displayExpandedArticle(feed: Feed, title: string): void {
+function displayExpandedArticle(feed, title) {
     // Find the corresponding RssItem based on the title
     const selectedRssItem = feed.items.find((item) => item.title === title);
-
     // Update the expanded article view with the selected RssItem details
     const expandedArticleImageElement = document.querySelector(".expanded-article-image");
     const articleTitleElement = document.querySelector(".article-title");
     const articleContentElement = document.querySelector(".article-content");
-
-    if (
-        expandedArticleImageElement instanceof HTMLElement &&
+    if (expandedArticleImageElement instanceof HTMLElement &&
         articleTitleElement instanceof HTMLElement &&
-        articleContentElement instanceof HTMLElement
-    ) {
+        articleContentElement instanceof HTMLElement) {
         if (selectedRssItem) {
             // Update the expanded article with the selected RSS item's details
             expandedArticleImageElement.style.backgroundImage = `url(${selectedRssItem.image || ""})`;
             articleTitleElement.textContent = selectedRssItem.title || "No Title";
             articleContentElement.textContent = selectedRssItem.description || "No Description";
-        } else {
+        }
+        else {
             // If the selected item is not found, reset the expanded article
             expandedArticleImageElement.style.backgroundImage = "none";
             articleTitleElement.textContent = "No Title";
@@ -74,5 +63,4 @@ function displayExpandedArticle(feed: Feed, title: string): void {
         }
     }
 }
-
 export { displayFeeds };
