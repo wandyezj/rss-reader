@@ -15,8 +15,7 @@ async function displayFeeds(RSS_URL) {
         // Update the HTML with the new feed items and the expanded article
         displayFeedItems(feedState.feeds);
         displayExpandedArticle(feedState.feeds[0], feedState.feeds[0].items[0]); // Assuming the first feed and its first item are selected by default
-    }
-    catch (error) {
+    } catch (error) {
         console.error("Error displaying feed data:", error);
     }
 }
@@ -46,16 +45,17 @@ function displayExpandedArticle(feed, title) {
     const expandedArticleImageElement = document.querySelector(".expanded-article-image");
     const articleTitleElement = document.querySelector(".article-title");
     const articleContentElement = document.querySelector(".article-content");
-    if (expandedArticleImageElement instanceof HTMLElement &&
+    if (
+        expandedArticleImageElement instanceof HTMLElement &&
         articleTitleElement instanceof HTMLElement &&
-        articleContentElement instanceof HTMLElement) {
+        articleContentElement instanceof HTMLElement
+    ) {
         if (selectedRssItem) {
             // Update the expanded article with the selected RSS item's details
             expandedArticleImageElement.style.backgroundImage = `url(${selectedRssItem.image || ""})`;
             articleTitleElement.textContent = selectedRssItem.title || "No Title";
             articleContentElement.textContent = selectedRssItem.description || "No Description";
-        }
-        else {
+        } else {
             // If the selected item is not found, reset the expanded article
             expandedArticleImageElement.style.backgroundImage = "none";
             articleTitleElement.textContent = "No Title";
