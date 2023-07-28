@@ -16,5 +16,95 @@
         <div id="insert"></div>
 
         <button id="button-add-feed">Add Feed</button>
+
+        <div class="container">
+            <div class="sidebar">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search" />
+                </div>
+                <ul class="sidebar-menu">
+                    <!-- Main sidebar options -->
+                    <li class="active"><a href="#">Today</a></li>
+                    <li><a href="#" class="unread">Unread</a></li>
+                    <li><a href="#" class="read-later">Read Later</a></li>
+
+                    <!-- Subscription section -->
+                    <li>
+                        <a href="#">Subscriptions</a>
+                        <ul class="subscription">
+                            <li><a href="#" class="active">News</a></li>
+                            <li><a href="#">Culture</a></li>
+                            <li><a href="#">Music</a></li>
+                            <li><a href="#">Podcasts & Shows</a></li>
+                            <!-- <li><a href="#">New Feed</a></li> -->
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="button-container">
+                    <!-- Import Button -->
+                    <label for="importFile" id="importButton" class="button-style">Import JSON</label>
+                    <input type="file" id="importFile" accept=".json" style="display: none" />
+
+                    <!-- Export Button -->
+                    <a href="#" download="feedData.json" id="exportButton" class="button-style">Export JSON</a>
+                </div>
+            </div>
+
+            <div class="articles">
+                <div class="article-list">
+                    <ul class="article-items">
+                        <li>
+                            <a href="#" class="article-link">
+                                <div class="article-content">
+                                    <div class="article-image"></div>
+                                    <div class="article-details">
+                                        <h2>Why the AI Hype Compels Me And Why These Two Major Threats ...</h2>
+                                        <p>
+                                            As artificial intelligence exerts a groundbreaking impact on our daily
+                                            lives, we are at a crossroads: adapt to create new opportunities or risk...
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="article-link">
+                                <div class="article-content">
+                                    <div class="article-image"></div>
+                                    <div class="article-details">
+                                        <h2>Why the AI Hype Compels Me And Why These Two Major Threats ...</h2>
+                                        <p>
+                                            As artificial intelligence exerts a groundbreaking impact on our daily
+                                            lives, we are at a crossroads: adapt to create new opportunities or risk...
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="article-link">
+                                <div class="article-content">
+                                    <div class="article-image"></div>
+                                    <div class="article-details">
+                                        <h2>Why the AI Hype Compels Me And Why These Two Major Threats ...</h2>
+                                        <p>
+                                            As artificial intelligence exerts a groundbreaking impact on our daily
+                                            lives, we are at a crossroads: adapt to create new opportunities or risk...
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="expanded-article">
+                <div class="expanded-article-image"></div>
+                <h2 class="expanded-article-title">Selected Article</h2>
+                <p class="expanded-article-content">This is the content of the selected article.</p>
+            </div>
+        </div>
     </body>
 </html>

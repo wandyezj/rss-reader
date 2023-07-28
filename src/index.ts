@@ -1,5 +1,6 @@
 import { RssItem, fetchAndParseRss } from "./parser";
 import { addFeed, setActiveFeed, markItemAsViewed, getFeedState } from "./FeedState/FeedState";
+import { displayFeeds } from "./UI/feedDisplay";
 import { saveSettings, loadSettings, downloadSettings, uploadSettings } from "./settings";
 import { website, clock } from "./website";
 
@@ -13,8 +14,10 @@ function initialize() {
         addFeed("https://feeds.npr.org/1001/rss.xml");
     });
 }
+const testUrl = "test-xml/npr.xml";
 
 initialize();
+displayFeeds(testUrl);
 
 export async function test(testUrl: string) {
     console.log("test");
@@ -28,7 +31,6 @@ export async function test(testUrl: string) {
 }
 
 //const testUrl = 'https://feeds.npr.org/1001/rss.xml';
-const testUrl = "test-xml/npr.xml";
 
 async function test2() {
     try {
