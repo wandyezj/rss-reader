@@ -13,11 +13,15 @@ function initialize() {
         debugger;
         addFeed("https://feeds.npr.org/1001/rss.xml");
     });
+
+    const testUrl = "test-xml/npr.xml";
+    // Used for playwright testing, do not remove
+    test(testUrl);
+
+    displayFeeds(testUrl);
 }
-const testUrl = "test-xml/npr.xml";
 
 initialize();
-displayFeeds(testUrl);
 
 export async function test(testUrl: string) {
     console.log("test");

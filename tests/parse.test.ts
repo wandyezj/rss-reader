@@ -1,4 +1,4 @@
-import { test, expect, Page } from "@playwright/test";
+import { test, expect, Page, selectors } from "@playwright/test";
 import { navigateToMainPage } from "./navigateToMainPage";
 
 test("load rss", async ({ browser }) => {
@@ -22,15 +22,15 @@ async function waitForLoad(page: Page) {
     await page.waitForTimeout(2000);
 }
 
-// function setTestId() {
-//     selectors.setTestIdAttribute("id");
-// }
+function setTestId() {
+    selectors.setTestIdAttribute("id");
+}
 
 test("Add Feed Button", async ({ browser }) => {
     const page = await navigateToMainPage(browser);
 
     await waitForLoad(page);
-
+    setTestId();
     await page.click("#button-add-feed");
 
     // Get the state
