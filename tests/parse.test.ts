@@ -31,7 +31,7 @@ test("Add Feed Button", async ({ browser }) => {
 
     await waitForLoad(page);
 
-    await page.click("#add-feed-button");
+    await page.click("#button-add-feed");
 
     // Get the state
     const stateData = await page.evaluate(() =>
