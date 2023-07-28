@@ -1,6 +1,21 @@
 // displayFeeds.ts
 import { addFeed, getFeedState } from "../FeedState/FeedState";
+import { fetchAndParseRss } from "../parser";
+
 async function displayFeeds() {
+    console.log("Please tell me you're working");
+    try {
+        const parserUrl = "https://feeds.npr.org/1001/rss.xml";
+        // Fetch and parse the RSS feed
+        const rssItems = await fetchAndParseRss(parserUrl);
+
+        // Prepare data for FeedState
+        const feedUrl = parserUrl; // URL of the feed
+        const feedItems = rssItems.map((item) => item.title || ""); // Get titles of the items
+
+        // Add the feed to the FeedState
+        addFeed(feedUrl, feedItems);
+
     console.log("Please tell me your working");
     try {
         // Fetch feed data from an API or source
@@ -29,7 +44,7 @@ async function displayFeeds() {
             });
         }
     } catch (error) {
-        console.error("Error fetching or displaying feed data:", error);
+        console.error("Error fetching, parsing, or displaying feed data:", error);
     }
 }
 
