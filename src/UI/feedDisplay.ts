@@ -35,7 +35,7 @@ function displayFeedItems(feeds: Feed[]): void {
                 const listItem = document.createElement("li");
                 const link = document.createElement("a");
                 link.href = "#";
-                link.textContent = item.description;
+                link.textContent = item.description || "";
                 listItem.appendChild(link);
                 articleListElement.appendChild(listItem);
 

@@ -29,18 +29,23 @@ export async function test(testUrl: string) {
 
 //const testUrl = 'https://feeds.npr.org/1001/rss.xml';
 const testUrl = "test-xml/npr.xml";
-test(testUrl);
 
-function test2() {
-    // How do we call these automatically?
-    addFeed("https://feeds.npr.org/1001/rss.xml");
-    setActiveFeed("https://feeds.npr.org/1001/rss.xml");
-    markItemAsViewed("https://feeds.npr.org/1001/rss.xml", "Item 1");
+async function test2() {
+    try {
+        const items = await test("https://feeds.npr.org/1001/rss.xml");
+        // How do we call these automatically?
+        addFeed("https://feeds.npr.org/1001/rss.xml");
+        setActiveFeed("https://feeds.npr.org/1001/rss.xml");
 
-    const currentState = getFeedState();
-    console.log(currentState);
+        markItemAsViewed("https://feeds.npr.org/1001/rss.xml", items[0]);
 
-    saveSettings(currentState);
-    const loadedSettings = loadSettings();
-    console.log(loadedSettings);
+        const currentState = getFeedState();
+        console.log(currentState);
+
+        saveSettings(currentState);
+        const loadedSettings = loadSettings();
+        console.log(loadedSettings);
+    } catch (error) {
+        console.error("Error fetching RSS items:", error);
+    }
 }
