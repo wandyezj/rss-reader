@@ -4,10 +4,9 @@ async function displayFeeds(RSS_URL) {
     console.log("Loading");
     try {
         // Fetch and parse the RSS feed using the parser
-        const rssItems = await fetchAndParseRss(RSS_URL);
+        const feedItems = await fetchAndParseRss(RSS_URL);
         // Prepare data for FeedState
         const feedUrl = RSS_URL; // URL of the feed
-        const feedItems = rssItems.map((item) => item.title || "");
         // Add the feed to the FeedState
         addFeed(feedUrl, feedItems);
         // Get the updated feed state
@@ -29,7 +28,7 @@ function displayFeedItems(feeds) {
                 const listItem = document.createElement("li");
                 const link = document.createElement("a");
                 link.href = "#";
-                link.textContent = item;
+                link.textContent = item.description;
                 listItem.appendChild(link);
                 articleListElement.appendChild(listItem);
                 // Add click event listener to display the selected article on click
@@ -40,11 +39,11 @@ function displayFeedItems(feeds) {
 }
 function displayExpandedArticle(feed, title) {
     // Find the corresponding RssItem based on the title
-    const selectedRssItem = feed.items.find((item) => item.title === title);
+    const selectedRssItem = feed.items.find((item) => item.title === title.title);
     // Update the expanded article view with the selected RssItem details
     const expandedArticleImageElement = document.querySelector(".expanded-article-image");
-    const articleTitleElement = document.querySelector(".article-title");
-    const articleContentElement = document.querySelector(".article-content");
+    const articleTitleElement = document.querySelector(".expanded-article-title");
+    const articleContentElement = document.querySelector(".expanded-article-content");
     if (
         expandedArticleImageElement instanceof HTMLElement &&
         articleTitleElement instanceof HTMLElement &&

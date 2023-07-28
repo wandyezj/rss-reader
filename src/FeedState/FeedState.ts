@@ -1,4 +1,5 @@
 // TypeScript file for FeedState
+import { RssItem } from "../parser";
 import { Feed, FeedState } from "./FeedState.interface";
 
 let state: FeedState = {
@@ -6,7 +7,7 @@ let state: FeedState = {
     activeFeed: null,
 };
 
-export function addFeed(url: string, items: string[] = []): void {
+export function addFeed(url: string, items: RssItem[] = []): void {
     if (state.feeds.some((feed) => feed.url === url)) {
         throw new Error(`Feed with URL ${url} already exists`);
     }
@@ -21,7 +22,7 @@ export function addFeed(url: string, items: string[] = []): void {
     localStorage.setItem(url, JSON.stringify(items));
 }
 
-export function refreshFeed(url: string, newItems: string[]): void {
+export function refreshFeed(url: string, newItems: RssItem[]): void {
     const feed = state.feeds.find((feed) => feed.url === url);
     if (feed) {
         const storedItems = JSON.parse(localStorage.getItem(url) || "[]");
@@ -48,7 +49,7 @@ export function setActiveFeed(url: string): void {
     }
 }
 
-export function markItemAsViewed(url: string, item: string): void {
+export function markItemAsViewed(url: string, item: RssItem): void {
     const feed = state.feeds.find((feed) => feed.url === url);
     if (feed) {
         const index = feed.items.indexOf(item);
