@@ -1,3 +1,4 @@
+import { displayFeed } from "./UI/displayFeed";
 import { registerButtonAddFeed } from "./registerButtonAddFeed";
 import { registerButtonStateDownload } from "./registerButtonStateDownload";
 import { registerButtonStateUpload } from "./registerButtonStateUpload";
@@ -15,6 +16,7 @@ function initialize() {
     registerButtonAddFeed();
     registerButtonStateUpload();
     registerButtonStateDownload();
+    displayFeed();
 }
 
 initialize();

@@ -68,18 +68,22 @@ function getFeedByUrl(url: string): Feed | undefined {
 
 export function addFeed(url: string, items: RssItem[] = []): void {
     const state = getState();
-    if (state.feeds.some((feed) => feed.url === url)) {
-        throw new Error(`Feed with URL ${url} already exists`);
+    const feed = getFeedByUrl(url);
+    if (feed === undefined) {
+        // New Feed
+        const newFeed: Feed = {
+            url,
+            lastFetched: new Date(),
+            items,
+            viewedItemIds: [],
+        };
+
+        state.feeds.push(newFeed);
+    } else {
+        // Update existing feed
+        console.log(`Feed exists with URL ${url}`);
     }
 
-    const newFeed: Feed = {
-        url,
-        lastFetched: new Date(),
-        items,
-        viewedItemIds: [],
-    };
-
-    state.feeds.push(newFeed);
     updateState();
 }
 

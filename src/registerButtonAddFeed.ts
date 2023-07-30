@@ -1,4 +1,5 @@
 import { addFeed } from "./State/State";
+import { displayFeed } from "./UI/displayFeed";
 import { getButton } from "./getButton";
 
 export function registerButtonAddFeed() {
@@ -21,5 +22,6 @@ export function registerButtonAddFeed() {
         } catch (error) {
             console.error("Failed to add feed", error);
         }
+        displayFeed();
     };
 }
