@@ -1,7 +1,10 @@
 import { addFeed } from "./State/State";
+import { getButton } from "./getButton";
 
 export function registerButtonAddFeed() {
-    document.getElementById("button-add-feed")?.addEventListener("click", async () => {
+    const button = getButton("button-add-feed");
+
+    button.onclick = async function () {
         debugger;
         try {
             // Add multiple feeds
@@ -18,5 +21,5 @@ export function registerButtonAddFeed() {
         } catch (error) {
             console.error("Failed to add feed", error);
         }
-    });
+    };
 }

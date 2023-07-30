@@ -1,11 +1,8 @@
 import { State, setState } from "./State/State";
+import { getButton } from "./getButton";
 
 export function registerButtonStateUpload() {
-    // Upload button
-    const buttonUpload = document.getElementById("button-state-upload");
-    if (!buttonUpload) {
-        throw new Error("Failed to find button-state-upload");
-    }
+    const buttonUpload = getButton("button-state-upload");
 
     buttonUpload.onchange = function () {
         var fileInput = buttonUpload as HTMLInputElement;
@@ -34,11 +31,4 @@ export function registerButtonStateUpload() {
 
         reader.readAsText(file);
     };
-
-    // const button = document.getElementById("importButton");
-    // if (button) {
-    //     button.onclick = function () {
-    //         buttonUpload.click();
-    //     };
-    // }
 }

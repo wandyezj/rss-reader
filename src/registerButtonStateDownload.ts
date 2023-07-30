@@ -1,10 +1,8 @@
 import { getState } from "./State/State";
+import { getButton } from "./getButton";
 
 export function registerButtonStateDownload() {
-    const button = document.getElementById("button-state-download");
-    if (!button) {
-        throw new Error("Failed to find button-state-download");
-    }
+    const button = getButton("button-state-download");
 
     button.onclick = function () {
         try {
