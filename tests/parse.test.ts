@@ -26,12 +26,15 @@ function setTestId() {
     selectors.setTestIdAttribute("id");
 }
 
+const idButtonAddFeed = "button-add-feed";
+
 test("Add Feed Button", async ({ browser }) => {
     const page = await navigateToMainPage(browser);
 
     await waitForLoad(page);
     setTestId();
-    await page.click("#button-add-feed");
+    const button = page.getByTestId(idButtonAddFeed);
+    await button.click();
 
     // Get the state
     const stateData = await page.evaluate(() =>
