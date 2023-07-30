@@ -1,9 +1,9 @@
 
 // displayFeeds.ts
-import { addFeed, getFeedState } from "../FeedState/feedState";
-import { fetchAndParseRss } from "../parser";
-import { RssItem, fetchAndParseRss } from "../parser";
-import { addFeed, getFeedState, Feed } from "../FeedState/feedState";
+import { addFeed, getFeedState } from "../State/State";
+import { fetchAndParseRss } from "../Parser/fetchAndParseRss";
+import { RssItem, fetchAndParseRss } from "../Parser/fetchAndParseRss";
+import { addFeed, getFeedState, Feed } from "../State/State";
 
 export async function displayFeeds() {
     console.log("Please tell me you're working");

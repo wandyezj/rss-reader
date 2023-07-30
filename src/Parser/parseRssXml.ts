@@ -1,33 +1,11 @@
-import { RssItem } from "./RssItem";
-
-/**
- * retrieve RSS feed from specified URL and parse it into RSS items
- * @param rssUrl
- * @returns
- */
-export async function fetchAndParseRss(rssUrl: string): Promise<RssItem[]> {
-    const xml = await fetchRssXml(rssUrl);
-    const items = parseRss(xml);
-    return items;
-}
-
-/**
- * Fetches RSS xml from url
- * @param rssUrl url of rss to fetch
- * @returns rss xml as string
- */
-export async function fetchRssXml(rssUrl: string): Promise<string> {
-    const response = await fetch(rssUrl);
-    const text = await response.text();
-    return text;
-}
+import { RssItem } from "../RssItem";
 
 /**
  * Parse RSS XML into RSS items
  * @param xml
  * @returns list of rss items parsed from XML
  */
-export function parseRss(xml: string): RssItem[] {
+export function parseRssXml(xml: string): RssItem[] {
     const data = new window.DOMParser().parseFromString(xml, "text/xml");
 
     const items = data.getElementsByTagName("item");

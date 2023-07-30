@@ -1,5 +1,5 @@
-import { RssItem, fetchAndParseRss } from "./parser";
-import { addFeed, setActiveFeed, markItemAsViewed, getFeedState } from "./FeedState/feedState";
+import { RssItem, fetchAndParseRss } from "./Parser/fetchAndParseRss";
+import { addFeed, setActiveFeed, markItemAsViewed, getFeedState } from "./State/State";
 import { displayFeeds } from "./UI/displayFeeds";
 import { saveSettings, loadSettings, downloadSettings, uploadSettings } from "./settings";
 import { website, clock } from "./website";
