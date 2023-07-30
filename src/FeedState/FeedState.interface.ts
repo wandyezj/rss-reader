@@ -9,4 +9,3 @@ export interface FeedState {
     feeds: Feed[];
     activeFeed: Feed | null;
 }
-// Path: src/FeedState/FeedState.ts

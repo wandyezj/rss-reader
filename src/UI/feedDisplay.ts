@@ -4,6 +4,21 @@ import { fetchAndParseRss } from "../parser";
 
 async function displayFeeds() {
     console.log("Please tell me you're working");
+
+    try {
+        const parserUrl = "https://feeds.npr.org/1001/rss.xml";
+        // Fetch and parse the RSS feed
+        const rssItems = await fetchAndParseRss(parserUrl);
+
+        // Prepare data for FeedState
+        const feedUrl = parserUrl; // URL of the feed
+        const feedItems = rssItems.map((item) => item.title || ""); // Get titles of the items
+
+        // Add the feed to the FeedState
+        addFeed(feedUrl, feedItems);
+
+    console.log("Please tell me your working");
+
     try {
         const parserUrl = "your_parser_url"; // Replace with your parser URL
         // Fetch and parse the RSS feed
