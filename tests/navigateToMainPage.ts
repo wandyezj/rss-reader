@@ -63,7 +63,8 @@ const localDistPath = path.resolve(getRootDirectory(), "dist");
 function getLocalDistItemData(itemPathRelative: string) {
     const itemPath = path.join(localDistPath, itemPathRelative);
     if (!fs.existsSync(itemPath)) {
-        throw new Error(`cannot find ${itemPathRelative}`);
+        console.error(`File not found: ${itemPathRelative}`);
+        return undefined;
     }
 
     const itemData = fs.readFileSync(itemPath);
