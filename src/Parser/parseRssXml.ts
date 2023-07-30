@@ -1,4 +1,4 @@
-import { RssItem } from "../RssItem";
+import { RssItem } from "../State/RssItem";
 
 /**
  * Parse RSS XML into RSS items
@@ -20,13 +20,18 @@ export function parseRssXml(xml: string): RssItem[] {
         }
 
         // Parse individual items values
+        const guid = getTagValue(item, "guid");
         const title = getTagValue(item, "title");
         const pubDate = getTagValue(item, "pubDate");
         const image = item.getElementsByTagName("img")[0]?.getAttribute("src") || undefined;
         const description = item.getElementsByTagName("description")[0].textContent || undefined;
         const link = getTagValue(item, "link");
 
+        // Way to uniquely identify the item in the feed - ideally preserved across loads
+        const id = guid || title || link || pubDate || "guid";
+
         const rssItem: RssItem = {
+            id,
             title,
             pubDate,
             image,

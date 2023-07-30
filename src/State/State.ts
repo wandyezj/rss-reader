@@ -1,20 +1,21 @@
 // TypeScript file for FeedState
-import { RssItem } from "../RssItem";
+import { Feed } from "./Feed";
+import { RssItem } from "./RssItem";
 
-export interface Feed {
-    url: string;
-    lastFetched: Date;
-    items: RssItem[];
-    viewedItems?: RssItem[];
-}
-
+/**
+ * The overall state of the application
+ */
 export interface State {
     feeds: Feed[];
-    activeFeed: Feed | null;
+
+    /**
+     * The URL of the feed that is currently being viewed?
+     */
+    activeFeedUrl: string | null;
 }
 
 /**
- * Global state.
+ * Global state variable
  */
 let globalState: State | undefined = undefined;
 
@@ -32,6 +33,10 @@ export function setState(state: State): void {
     updateState();
 }
 
+/**
+ * Get the global state.
+ * get current globalState, from object, local storage, od default to starting state.
+ */
 export function getState(): State {
     // if already loaded, return the global state.
     if (globalState) {
@@ -48,7 +53,7 @@ export function getState(): State {
     if (globalState === undefined) {
         const startingState: State = {
             feeds: [],
-            activeFeed: null,
+            activeFeedUrl: null,
         };
         globalState = startingState;
     }
@@ -71,10 +76,11 @@ export function addFeed(url: string, items: RssItem[] = []): void {
         url,
         lastFetched: new Date(),
         items,
+        viewedItemIds: [],
     };
 
     state.feeds.push(newFeed);
-    setState(state);
+    updateState();
 }
 
 export function refreshFeed(url: string, newItems: RssItem[]): void {
@@ -99,7 +105,7 @@ export function setActiveFeed(url: string): void {
     const state = getState();
     const feed = getFeedByUrl(url);
     if (feed) {
-        state.activeFeed = feed;
+        state.activeFeedUrl = feed.url;
     } else {
         throw new Error("Feed not found");
     }

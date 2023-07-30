@@ -1,4 +1,4 @@
-import { RssItem } from "../RssItem";
+import { RssItem } from "../State/RssItem";
 import { fetchRssXml } from "./fetchRssXml";
 import { parseRssXml } from "./parseRssXml";
 
