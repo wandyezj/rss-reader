@@ -1,8 +1,10 @@
+import { RssItem } from "../parser";
+
 export interface Feed {
     url: string;
     lastFetched: Date;
-    items: string[];
-    viewedItems?: string[];
+    items: RssItem[];
+    viewedItems?: RssItem[];
 }
 
 export interface FeedState {
