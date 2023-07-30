@@ -1,5 +1,6 @@
 import { RssItem, fetchAndParseRss } from "./parser";
 import { addFeed, setActiveFeed, markItemAsViewed, getFeedState } from "./FeedState/FeedState";
+import { displayFeeds } from "./UI/feedDisplay";
 import { saveSettings, loadSettings, downloadSettings, uploadSettings } from "./settings";
 import { website, clock } from "./website";
 import { displayFeeds } from "./UI/feedDisplay";
@@ -78,6 +79,12 @@ function initialize() {
             console.error("Failed to download feeds", error);
         }
     });
+
+    const testUrl = "test-xml/npr.xml";
+    // Used for playwright testing, do not remove
+    test(testUrl);
+
+    displayFeeds(testUrl);
 }
 
 initialize();
@@ -107,8 +114,6 @@ export async function test(testUrl: string) {
 }
 
 //const testUrl = 'https://feeds.npr.org/1001/rss.xml';
-const testUrl = "test-xml/npr.xml";
-test(testUrl);
 
 function test2() {
     addFeed("https://feeds.npr.org/1001/rss.xml");
@@ -146,4 +151,23 @@ function initialize() {
     saveSettings(currentState);
     const loadedSettings = loadSettings();
     console.log(loadedSettings);
+
+async function test2() {
+    try {
+        const items = await test("https://feeds.npr.org/1001/rss.xml");
+        // How do we call these automatically?
+        addFeed("https://feeds.npr.org/1001/rss.xml");
+        setActiveFeed("https://feeds.npr.org/1001/rss.xml");
+
+        markItemAsViewed("https://feeds.npr.org/1001/rss.xml", items[0]);
+
+        const currentState = getFeedState();
+        console.log(currentState);
+
+        saveSettings(currentState);
+        const loadedSettings = loadSettings();
+        console.log(loadedSettings);
+    } catch (error) {
+        console.error("Error fetching RSS items:", error);
+    }
 }

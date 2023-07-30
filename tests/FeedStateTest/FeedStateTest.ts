@@ -2,6 +2,7 @@
 
 import { expect, test } from "@playwright/test";
 import { addFeed, setActiveFeed, markItemAsViewed, getFeedState } from "../../src/FeedState/FeedState";
+import { fetchAndParseRss } from "../../src/parser";
 
 const feedUrl = "https://feeds.npr.org/1001/rss.xml"; // You can change this URL to test with different feeds
 const nonExistentFeedUrl = feedUrl.replace(".org", ".com"); // This should be a URL that doesn't exist in the feeds
@@ -35,18 +36,20 @@ test("throws error when setting non-existent feed as active", () => {
     }).toThrow("Feed not found");
 });
 
-test("marks item as viewed", () => {
+test("marks item as viewed", async () => {
+    const items = await fetchAndParseRss(feedUrl);
     addFeed(feedUrl);
-    markItemAsViewed(feedUrl, "Item 1");
+    markItemAsViewed(feedUrl, items[0]);
     const state = getFeedState();
     // Assume that the 'viewedItems' property exists on 'Feed' and is initialized as an empty array
     if (state.feeds[0].viewedItems) {
-        expect(state.feeds[0].viewedItems).toContain("Item 1");
+        expect(state.feeds[0].viewedItems).toContain(items[0]);
     }
 });
 
-test("throws error when marking item as viewed in non-existent feed", () => {
+test("throws error when marking item as viewed in non-existent feed", async () => {
+    const items = await fetchAndParseRss(nonExistentFeedUrl);
     expect(() => {
-        markItemAsViewed(nonExistentFeedUrl, "Item 1");
+        markItemAsViewed(nonExistentFeedUrl, items[0]);
     }).toThrow("Feed not found");
 });

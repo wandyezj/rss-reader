@@ -105,7 +105,7 @@ body {
 
 .article-list {
     flex-basis: 65%;
-    display: flex;
+    display: flex; /* Change to display flex */
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -171,13 +171,13 @@ body {
     background: rgba(116, 96, 96, 0.17);
 }
 
-.expanded-article h2 {
+.expanded-article-title {
     color: #555;
     margin-top: 10px;
     font-size: 24px;
 }
 
-.expanded-article p {
+.expanded-article-content {
     color: #777;
     font-size: 16px;
 }
