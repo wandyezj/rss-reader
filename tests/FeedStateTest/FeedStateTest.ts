@@ -1,7 +1,7 @@
 // test/FeedState.test.ts
 
 import { expect, test } from "@playwright/test";
-import { addFeed, setActiveFeed, markItemAsViewed, getFeedState } from "../../src/FeedState/FeedState";
+import { addFeed, setActiveFeed, markItemAsViewed, getFeedState } from "../../src/FeedState/feedState";
 import { fetchAndParseRss } from "../../src/parser";
 
 const feedUrl = "https://feeds.npr.org/1001/rss.xml"; // You can change this URL to test with different feeds

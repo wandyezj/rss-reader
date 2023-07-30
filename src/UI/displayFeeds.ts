@@ -1,9 +1,11 @@
 
 // displayFeeds.ts
-import { addFeed, getFeedState } from "../FeedState/FeedState";
+import { addFeed, getFeedState } from "../FeedState/feedState";
 import { fetchAndParseRss } from "../parser";
+import { RssItem, fetchAndParseRss } from "../parser";
+import { addFeed, getFeedState, Feed } from "../FeedState/feedState";
 
-async function displayFeeds() {
+export async function displayFeeds() {
     console.log("Please tell me you're working");
 
     try {
@@ -29,8 +31,7 @@ async function displayFeeds() {
         const feedUrl = parserUrl; // URL of the feed
         const feedItems = rssItems.map((item) => item.title || ""); // Get titles of the items
 
-import { RssItem, fetchAndParseRss } from "../parser";
-import { addFeed, getFeedState, Feed } from "../FeedState/FeedState";
+
 
 async function displayFeeds(RSS_URL: string): Promise<void> {
     console.log("Loading");

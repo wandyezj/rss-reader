@@ -1,9 +1,9 @@
 import { RssItem, fetchAndParseRss } from "./parser";
-import { addFeed, setActiveFeed, markItemAsViewed, getFeedState } from "./FeedState/FeedState";
-import { displayFeeds } from "./UI/feedDisplay";
+import { addFeed, setActiveFeed, markItemAsViewed, getFeedState } from "./FeedState/feedState";
+import { displayFeeds } from "./UI/displayFeeds";
 import { saveSettings, loadSettings, downloadSettings, uploadSettings } from "./settings";
 import { website, clock } from "./website";
-import { displayFeeds } from "./UI/feedDisplay";
+import { displayFeeds } from "./UI/displayFeeds";
 
 console.log(website());
 clock();

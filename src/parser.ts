@@ -1,12 +1,4 @@
-export interface RssItem {
-    title?: string;
-    pubDate?: string;
-    image?: string;
-    description?: string;
-    link?: string;
-}
-
-//retrieve RSS feed from specified URL
+import { RssItem } from "./RssItem";
 
 /**
  * retrieve RSS feed from specified URL and parse it into RSS items
@@ -20,7 +12,7 @@ export async function fetchAndParseRss(rssUrl: string): Promise<RssItem[]> {
 }
 
 /**
- *
+ * Fetches RSS xml from url
  * @param rssUrl url of rss to fetch
  * @returns rss xml as string
  */
