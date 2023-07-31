@@ -1,57 +1,28 @@
-import { RssItem, fetchAndParseRss } from "./parser";
-import { addFeed, setActiveFeed, markItemAsViewed, getFeedState } from "./FeedState/FeedState";
-import { displayFeeds } from "./UI/feedDisplay";
-import { saveSettings, loadSettings, downloadSettings, uploadSettings } from "./settings";
+import { refreshFeed } from "./State/State";
+import { displayFeed } from "./UI/displayFeed";
+import { refreshFeeds } from "./refreshFeeds";
+import { registerButtonAddFeed } from "./registerButtonAddFeed";
+import { registerButtonRefresh } from "./registerButtonRefresh";
+import { registerButtonStateDownload } from "./registerButtonStateDownload";
+import { registerButtonStateUpload } from "./registerButtonStateUpload";
 import { website, clock } from "./website";
 
 console.log(website());
 clock();
 
+/**
+ * Initialize the application
+ * register button handlers
+ */
 function initialize() {
-    // Register button handlers
-    document.getElementById("button-add-feed")?.addEventListener("click", () => {
-        debugger;
-        addFeed("https://feeds.npr.org/1001/rss.xml");
-    });
-
-    const testUrl = "test-xml/npr.xml";
-    // Used for playwright testing, do not remove
-    test(testUrl);
-
-    displayFeeds(testUrl);
+    // Button Handlers
+    registerButtonAddFeed();
+    registerButtonRefresh();
+    registerButtonStateUpload();
+    registerButtonStateDownload();
+    displayFeed();
+    // reload all feeds
+    refreshFeeds();
 }
 
 initialize();
-
-export async function test(testUrl: string) {
-    console.log("test");
-    debugger;
-
-    const items = await fetchAndParseRss(testUrl);
-    console.log(items);
-    localStorage.setItem("test", JSON.stringify(items));
-
-    return items;
-}
-
-//const testUrl = 'https://feeds.npr.org/1001/rss.xml';
-
-async function test2() {
-    try {
-        const items = await test("https://feeds.npr.org/1001/rss.xml");
-        // How do we call these automatically?
-        addFeed("https://feeds.npr.org/1001/rss.xml");
-        setActiveFeed("https://feeds.npr.org/1001/rss.xml");
-
-        markItemAsViewed("https://feeds.npr.org/1001/rss.xml", items[0]);
-
-        const currentState = getFeedState();
-        console.log(currentState);
-
-        saveSettings(currentState);
-        const loadedSettings = loadSettings();
-        console.log(loadedSettings);
-    } catch (error) {
-        console.error("Error fetching RSS items:", error);
-    }
-}

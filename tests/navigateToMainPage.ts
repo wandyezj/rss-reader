@@ -1,6 +1,6 @@
-import { test, expect, selectors, Page, Browser } from "@playwright/test";
+import { expect, Page, Browser } from "@playwright/test";
 import * as fs from "fs";
-import path, { relative } from "path";
+import path from "path";
 import { getRootDirectory } from "./getRootDirectory";
 
 /**
@@ -19,14 +19,6 @@ export async function navigateToMainPage(browser: Browser): Promise<Page> {
 
     // redirect to local data
     if (useLocalDist) {
-        // // interceptor to replace content of the page
-        // page.route(mainPageRootUrl, (route, request) => {
-        //     route.fulfill({
-        //         // need to make generic
-        //         body: getLocalDistIndexData(),
-        //     });
-        // });
-
         // interceptor to replace content of the page
         // Redirect all relative urls to local dist
         page.route(`${mainPageRootUrl}**/*`, (route, request) => {
@@ -63,7 +55,8 @@ const localDistPath = path.resolve(getRootDirectory(), "dist");
 function getLocalDistItemData(itemPathRelative: string) {
     const itemPath = path.join(localDistPath, itemPathRelative);
     if (!fs.existsSync(itemPath)) {
-        throw new Error(`cannot find ${itemPathRelative}`);
+        console.error(`File not found: ${itemPathRelative}`);
+        return undefined;
     }
 
     const itemData = fs.readFileSync(itemPath);

@@ -40,14 +40,26 @@
                 </ul>
 
                 <div class="button-container">
+                    <!-- Add Feed -->
+                    <button id="button-add-feed" class="button-style">Add Feed</button>
+
+                    <button id="button-refresh" class="button-style">Refresh</button>
+
                     <!-- Import Button -->
-                    <label for="importFile" id="importButton" class="button-style">Import JSON</label>
-                    <input type="file" id="importFile" accept=".json" style="display: none" />
+                    <label id="importButton" for="button-state-upload" class="button-style">Import JSON</label>
+                    <input
+                        id="button-state-upload"
+                        type="file"
+                        accept=".json"
+                        style="display: none"
+                        aria-label="Load File"
+                    />
 
                     <!-- Export Button -->
-                    <a href="#" download="feedData.json" id="exportButton" class="button-style">Export JSON</a>
-
-                    <button id="button-add-feed" class="button-style">Add Feed</button>
+                    <button id="button-state-download" class="button-style">Export JSON</button>
+                    <!-- <a href="#" download="rss-reader-state.json" id="button-state-download" class="button-style"
+                        >Export JSON</a
+                    > -->
                 </div>
             </div>
 

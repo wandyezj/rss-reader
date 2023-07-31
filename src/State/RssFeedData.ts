@@ -1,4 +1,4 @@
-interface RSSFeedData {
+interface RssFeedData {
     url: string;
     items: string[];
 }

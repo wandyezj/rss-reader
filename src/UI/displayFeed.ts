@@ -1,26 +1,29 @@
-import { RssItem, fetchAndParseRss } from "../parser";
-import { addFeed, getFeedState, Feed } from "../FeedState/FeedState";
+import { fetchAndParseRss } from "../Parser/fetchAndParseRss";
+import { RssItem } from "../State/RssItem";
+import { addFeed, getState } from "../State/State";
+import { Feed } from "../State/Feed";
 
-async function displayFeeds(RSS_URL: string): Promise<void> {
-    console.log("Loading");
+/**
+ * Displays the current feed based on the current state
+ */
+export async function displayFeed(): Promise<void> {
+    // Get the updated feed state
+    const state = getState();
+
     try {
-        // Fetch and parse the RSS feed using the parser
-        const feedItems: RssItem[] = await fetchAndParseRss(RSS_URL);
-
-        // Prepare data for FeedState
-        const feedUrl = RSS_URL; // URL of the feed
-
-        // Add the feed to the FeedState
-        addFeed(feedUrl, feedItems);
-
-        // Get the updated feed state
-        const feedState = getFeedState();
-
         // Update the HTML with the new feed items and the expanded article
-        displayFeedItems(feedState.feeds);
-        displayExpandedArticle(feedState.feeds[0], feedState.feeds[0].items[0]); // Assuming the first feed and its first item are selected by default
+        displayFeedItems(state.feeds);
+
+        // Assume the first feed and its first item are selected by default
+        if (state.feeds.length > 0) {
+            const firstFeed = state.feeds[0];
+            if (firstFeed.items.length > 0) {
+                const firstItem = firstFeed.items[0];
+                displayExpandedArticle(firstFeed, firstItem);
+            }
+        }
     } catch (error) {
-        console.error("Error displaying feed data:", error);
+        console.error("Error updating HTML with feed items:", error);
     }
 }
 
@@ -73,5 +76,3 @@ function displayExpandedArticle(feed: Feed, title: RssItem): void {
         }
     }
 }
-
-export { displayFeeds };
