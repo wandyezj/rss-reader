@@ -42,7 +42,6 @@
 // function initialize() {
 //     // Add feed button
 //     document.getElementById("add-feed-button")?.addEventListener("click", async () => {
-//         debugger;
 //         try {
 //             // Add multiple feeds
 //             const feedUrls = [

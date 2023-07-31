@@ -6,6 +6,9 @@ import { RssItem } from "../State/RssItem";
  * @returns list of rss items parsed from XML
  */
 export function parseRssXml(xml: string): RssItem[] {
+    // Some feeds use the Atom format these require slightly different parsing logic
+    // TODO: detect if this is an atom feed and switch over the parser
+
     const data = new window.DOMParser().parseFromString(xml, "text/xml");
 
     const items = data.getElementsByTagName("item");

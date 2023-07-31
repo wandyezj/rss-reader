@@ -3,44 +3,25 @@ import { RssItem } from "../State/RssItem";
 import { addFeed, getState } from "../State/State";
 import { Feed } from "../State/Feed";
 
-//     try {
-//         const parserUrl = "https://feeds.npr.org/1001/rss.xml";
-//         // Fetch and parse the RSS feed
-//         const rssItems = await fetchAndParseRss(parserUrl);
-
-//         // Prepare data for FeedState
-//         const feedUrl = parserUrl; // URL of the feed
-//         const feedItems = rssItems.map((item) => item.title || ""); // Get titles of the items
-
-//         // Add the feed to the FeedState
-//         addFeed(feedUrl, feedItems);
-
-//     console.log("Please tell me your working");
-
-//     try {
-//         const parserUrl = "your_parser_url"; // Replace with your parser URL
-//         // Fetch and parse the RSS feed
-//         const rssItems = await fetchAndParseRss(parserUrl);
-
-//         // Prepare data for FeedState
-//         const feedUrl = parserUrl; // URL of the feed
-//         const feedItems = rssItems.map((item) => item.title || ""); // Get titles of the items
-//     }
-// }
-// }
-
 /**
  * Displays the current feed based on the current state
  */
 export async function displayFeed(): Promise<void> {
     // Get the updated feed state
-    const feedState = getState();
+    const state = getState();
 
     try {
         // Update the HTML with the new feed items and the expanded article
-        displayFeedItems(feedState.feeds);
-        // Assuming the first feed and its first item are selected by default
-        displayExpandedArticle(feedState.feeds[0], feedState.feeds[0].items[0]);
+        displayFeedItems(state.feeds);
+
+        // Assume the first feed and its first item are selected by default
+        if (state.feeds.length > 0) {
+            const firstFeed = state.feeds[0];
+            if (firstFeed.items.length > 0) {
+                const firstItem = firstFeed.items[0];
+                displayExpandedArticle(firstFeed, firstItem);
+            }
+        }
     } catch (error) {
         console.error("Error updating HTML with feed items:", error);
     }

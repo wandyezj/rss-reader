@@ -81,11 +81,12 @@ export function addFeed(url: string, items: RssItem[]): void {
         state.feeds.push(newFeed);
     } else {
         // Update existing feed
-        console.log(`Feed exists with URL ${url}`);
+        console.log(`${url} Feed exists`);
 
         // Add new items
         const newItems = items.filter((item) => !feed.items.some(({ id }) => id === item.id));
-        items.push(...newItems);
+        console.log(`${url} Adding ${newItems.length} new items`);
+        feed.items.push(...newItems);
     }
 
     updateState();
