@@ -66,7 +66,7 @@ function getFeedByUrl(url: string): Feed | undefined {
     return state.feeds.find((feed) => feed.url === url);
 }
 
-export function addFeed(url: string, items: RssItem[] = []): void {
+export function addFeed(url: string, items: RssItem[]): void {
     const state = getState();
     const feed = getFeedByUrl(url);
     if (feed === undefined) {
@@ -82,6 +82,10 @@ export function addFeed(url: string, items: RssItem[] = []): void {
     } else {
         // Update existing feed
         console.log(`Feed exists with URL ${url}`);
+
+        // Add new items
+        const newItems = items.filter((item) => !feed.items.some(({ id }) => id === item.id));
+        items.push(...newItems);
     }
 
     updateState();

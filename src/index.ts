@@ -1,5 +1,6 @@
 import { displayFeed } from "./UI/displayFeed";
 import { registerButtonAddFeed } from "./registerButtonAddFeed";
+import { registerButtonRefresh } from "./registerButtonRefresh";
 import { registerButtonStateDownload } from "./registerButtonStateDownload";
 import { registerButtonStateUpload } from "./registerButtonStateUpload";
 import { website, clock } from "./website";
@@ -14,6 +15,7 @@ clock();
 function initialize() {
     // Button Handlers
     registerButtonAddFeed();
+    registerButtonRefresh();
     registerButtonStateUpload();
     registerButtonStateDownload();
     displayFeed();
