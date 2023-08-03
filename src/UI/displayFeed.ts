@@ -28,22 +28,54 @@ export async function displayFeed(): Promise<void> {
 }
 
 function displayFeedItems(feeds: Feed[]): void {
-    const articleListElement = document.querySelector(".article-items");
-    if (articleListElement) {
-        articleListElement.innerHTML = ""; // Clear existing items
+    const feedBoxContainer = document.querySelector(".feed-box-container");
+    if (feedBoxContainer) {
+        feedBoxContainer.innerHTML = ""; // Clear existing feed items
 
-        // Loop through the feed items and create list items for each
         feeds.forEach((feed) => {
             feed.items.forEach((item) => {
-                const listItem = document.createElement("li");
-                const link = document.createElement("a");
-                link.href = "#";
-                link.textContent = item.description || "";
-                listItem.appendChild(link);
-                articleListElement.appendChild(listItem);
+                const feedBox = document.createElement("div");
+                feedBox.classList.add("feed-box");
+
+                const feedBoxImg = document.createElement("div");
+                feedBoxImg.classList.add("feed-box-img");
+                const img = document.createElement("img");
+                img.src = item.image || "default-image.jpg";
+                img.alt = "feed img";
+                feedBoxImg.appendChild(img);
+
+                const feedImgLink = document.createElement("a");
+                feedImgLink.href = "#";
+                feedImgLink.classList.add("feed-img-link");
+                const arrowIcon = document.createElement("i");
+                arrowIcon.classList.add("fa-solid", "fa-arrow-up-right-from-square");
+                feedImgLink.appendChild(arrowIcon);
+                feedBoxImg.appendChild(feedImgLink);
+
+                feedBox.appendChild(feedBoxImg);
+
+                const feedBoxText = document.createElement("div");
+                feedBoxText.classList.add("feed-box-text");
+
+                const strong = document.createElement("strong");
+                strong.textContent = "Publication Date";
+                feedBoxText.appendChild(strong);
+
+                const titleLink = document.createElement("a");
+                titleLink.href = "#";
+                titleLink.textContent = item.title || "";
+                feedBoxText.appendChild(titleLink);
+
+                const description = document.createElement("p");
+                description.textContent = "Here goes the description";
+                feedBoxText.appendChild(description);
+
+                feedBox.appendChild(feedBoxText);
+
+                feedBoxContainer.appendChild(feedBox);
 
                 // Add click event listener to display the selected article on click
-                link.addEventListener("click", () => displayExpandedArticle(feed, item));
+                feedBox.addEventListener("click", () => displayExpandedArticle(feed, item));
             });
         });
     }
@@ -53,26 +85,11 @@ function displayExpandedArticle(feed: Feed, title: RssItem): void {
     // Find the corresponding RssItem based on the title
     const selectedRssItem = feed.items.find((item) => item.title === title.title);
 
-    // Update the expanded article view with the selected RssItem details
-    const expandedArticleImageElement = document.querySelector(".expanded-article-image");
-    const articleTitleElement = document.querySelector(".expanded-article-title");
-    const articleContentElement = document.querySelector(".expanded-article-content");
+    if (selectedRssItem) {
+        // Store the selectedRssItem data in sessionStorage
+        sessionStorage.setItem("selectedRssItem", JSON.stringify(selectedRssItem));
 
-    if (
-        expandedArticleImageElement instanceof HTMLElement &&
-        articleTitleElement instanceof HTMLElement &&
-        articleContentElement instanceof HTMLElement
-    ) {
-        if (selectedRssItem) {
-            // Update the expanded article with the selected RSS item's details
-            expandedArticleImageElement.style.backgroundImage = `url(${selectedRssItem.image || ""})`;
-            articleTitleElement.textContent = selectedRssItem.title || "No Title";
-            articleContentElement.textContent = selectedRssItem.description || "No Description";
-        } else {
-            // If the selected item is not found, reset the expanded article
-            expandedArticleImageElement.style.backgroundImage = "none";
-            articleTitleElement.textContent = "No Title";
-            articleContentElement.textContent = "No Description";
-        }
+        // Redirect to single.html
+        window.location.href = "single.html";
     }
 }
