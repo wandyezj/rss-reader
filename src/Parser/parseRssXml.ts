@@ -1,41 +1,14 @@
-export interface RssItem {
-    title?: string;
-    pubDate?: string;
-    image?: string;
-    description?: string;
-    link?: string;
-}
-
-//retrieve RSS feed from specified URL
-
-/**
- * retrieve RSS feed from specified URL and parse it into RSS items
- * @param rssUrl
- * @returns
- */
-export async function fetchAndParseRss(rssUrl: string): Promise<RssItem[]> {
-    const xml = await fetchRssXml(rssUrl);
-    const items = parseRss(xml);
-    return items;
-}
-
-/**
- *
- * @param rssUrl url of rss to fetch
- * @returns rss xml as string
- */
-export async function fetchRssXml(rssUrl: string): Promise<string> {
-    const response = await fetch(rssUrl);
-    const text = await response.text();
-    return text;
-}
+import { RssItem } from "../State/RssItem";
 
 /**
  * Parse RSS XML into RSS items
  * @param xml
  * @returns list of rss items parsed from XML
  */
-export function parseRss(xml: string): RssItem[] {
+export function parseRssXml(xml: string): RssItem[] {
+    // Some feeds use the Atom format these require slightly different parsing logic
+    // TODO: detect if this is an atom feed and switch over the parser
+
     const data = new window.DOMParser().parseFromString(xml, "text/xml");
 
     const items = data.getElementsByTagName("item");
@@ -50,13 +23,18 @@ export function parseRss(xml: string): RssItem[] {
         }
 
         // Parse individual items values
+        const guid = getTagValue(item, "guid");
         const title = getTagValue(item, "title");
         const pubDate = getTagValue(item, "pubDate");
         const image = item.getElementsByTagName("img")[0]?.getAttribute("src") || undefined;
         const description = item.getElementsByTagName("description")[0].textContent || undefined;
         const link = getTagValue(item, "link");
 
+        // Way to uniquely identify the item in the feed - ideally preserved across loads
+        const id = guid || title || link || pubDate || "guid";
+
         const rssItem: RssItem = {
+            id,
             title,
             pubDate,
             image,
