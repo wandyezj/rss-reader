@@ -5,12 +5,15 @@
         <meta charset="UTF-8" />
         <title>Single Article - RSS Reader</title>
         <meta name="viewport" content="width=device-width" />
-    <!-- Your CSS and other head elements -->
-    <link rel="stylesheet" href="index.css">
-    <!--Import the Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- Your CSS and other head elements -->
+        <link rel="stylesheet" href="index.css" />
+        <!--Import the Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <!-- Image header -->
@@ -21,55 +24,54 @@
                 <a href="#">Menu Item</a>
             </nav>
             <div class="hero">
-              <h1><a href="#">Title of the Feed</a></h1>
+                <h1><a href="#">Title of the Feed</a></h1>
             </div>
             <a href="#" data-tip="Share" class="gen">⚒</a>
             <a href="#" data-tip="Favorites" class="sel">★</a>
-          </div>
-    
+        </div>
+
         <!-- Main content -->
         <div class="single-article">
             <div class="article-image"></div>
             <p class="article-content">Article content goes here.</p>
             <a href="index.html" data-tip="Back" class="bac">Back</a>
         </div>
-    
-        
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            // Get the selectedRssItem data from localStorage based on the unique identifier
-            const urlParams = new URLSearchParams(window.location.search);
-            const articleId = urlParams.get("id");
-            const selectedRssItem = JSON.parse(localStorage.getItem(articleId));
 
-            // Update the elements in single.html with the selectedRssItem details
-            const articleImageElement = document.querySelector(".article-image");
-            const articleTitleElement = document.querySelector(".article-title");
-            const articleContentElement = document.querySelector(".article-content");
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                // Get the selectedRssItem data from localStorage based on the unique identifier
+                const urlParams = new URLSearchParams(window.location.search);
+                const articleId = urlParams.get("id");
+                const selectedRssItem = JSON.parse(localStorage.getItem(articleId));
 
-            if (
-                articleImageElement instanceof HTMLElement &&
-                articleTitleElement instanceof HTMLElement &&
-                articleContentElement instanceof HTMLElement
-            ) {
-                if (selectedRssItem) {
-                    // Update the single article page with the selected RSS item's details
-                    articleImageElement.style.backgroundImage = `url(${selectedRssItem.image || "UI/default-img.jpg"})`;
-                    articleTitleElement.textContent = selectedRssItem.title || "No Title";
-                    articleContentElement.textContent = selectedRssItem.description || "No Description";
+                // Update the elements in single.html with the selectedRssItem details
+                const articleImageElement = document.querySelector(".article-image");
+                const articleTitleElement = document.querySelector(".article-title");
+                const articleContentElement = document.querySelector(".article-content");
 
-                    // Clear the selectedRssItem data from localStorage after using it
-                    localStorage.removeItem(articleId);
-                } else {
-                    // If the selected item is not found, display a message or handle it accordingly
-                    articleImageElement.style.backgroundImage = "none";
-                    articleTitleElement.textContent = "No Title";
-                    articleContentElement.textContent = "No Description";
+                if (
+                    articleImageElement instanceof HTMLElement &&
+                    articleTitleElement instanceof HTMLElement &&
+                    articleContentElement instanceof HTMLElement
+                ) {
+                    if (selectedRssItem) {
+                        // Update the single article page with the selected RSS item's details
+                        articleImageElement.style.backgroundImage = `url(${
+                            selectedRssItem.image || "UI/default-img.jpg"
+                        })`;
+                        articleTitleElement.textContent = selectedRssItem.title || "No Title";
+                        articleContentElement.textContent = selectedRssItem.description || "No Description";
+
+                        // Clear the selectedRssItem data from localStorage after using it
+                        localStorage.removeItem(articleId);
+                    } else {
+                        // If the selected item is not found, display a message or handle it accordingly
+                        articleImageElement.style.backgroundImage = "none";
+                        articleTitleElement.textContent = "No Title";
+                        articleContentElement.textContent = "No Description";
+                    }
                 }
-            }
-        });
-    </script>
+            });
+        </script>
     </body>
-    </html>
-    
-    
+</html>
