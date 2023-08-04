@@ -1,7 +1,8 @@
-import { fetchAndParseRss } from "../Parser/fetchAndParseRss";
-import { RssItem } from "../State/RssItem";
-import { addFeed, getState } from "../State/State";
+// displayFeed.ts
+
 import { Feed } from "../State/Feed";
+import { RssItem } from "../State/RssItem";
+import { getState } from "../State/State";
 
 /**
  * Displays the current feed based on the current state
@@ -11,17 +12,8 @@ export async function displayFeed(): Promise<void> {
     const state = getState();
 
     try {
-        // Update the HTML with the new feed items and the expanded article
+        // Update the HTML with the new feed items
         displayFeedItems(state.feeds);
-
-        // Assume the first feed and its first item are selected by default
-        if (state.feeds.length > 0) {
-            const firstFeed = state.feeds[0];
-            if (firstFeed.items.length > 0) {
-                const firstItem = firstFeed.items[0];
-                displayExpandedArticle(firstFeed, firstItem);
-            }
-        }
     } catch (error) {
         console.error("Error updating HTML with feed items:", error);
     }
@@ -40,12 +32,12 @@ function displayFeedItems(feeds: Feed[]): void {
                 const feedBoxImg = document.createElement("div");
                 feedBoxImg.classList.add("feed-box-img");
                 const img = document.createElement("img");
-                img.src = item.image || "default-image.jpg";
+                img.src = item.image || "../UI/default-image.jpg";
                 img.alt = "feed img";
                 feedBoxImg.appendChild(img);
 
                 const feedImgLink = document.createElement("a");
-                feedImgLink.href = "#";
+                feedImgLink.href = `single.html?title=${encodeURIComponent(item.title || "")}`;
                 feedImgLink.classList.add("feed-img-link");
                 const arrowIcon = document.createElement("i");
                 arrowIcon.classList.add("fa-solid", "fa-arrow-up-right-from-square");
@@ -62,28 +54,27 @@ function displayFeedItems(feeds: Feed[]): void {
                 feedBoxText.appendChild(strong);
 
                 const titleLink = document.createElement("a");
-                titleLink.href = "#";
+                titleLink.href = `single.html?title=${encodeURIComponent(item.title || "")}`;
                 titleLink.textContent = item.title || "";
                 feedBoxText.appendChild(titleLink);
 
                 const description = document.createElement("p");
-                description.textContent = "Here goes the description";
+                description.textContent = item.description || "No Description";
                 feedBoxText.appendChild(description);
 
                 feedBox.appendChild(feedBoxText);
 
                 feedBoxContainer.appendChild(feedBox);
-
-                // Add click event listener to display the selected article on click
-                feedBox.addEventListener("click", () => displayExpandedArticle(feed, item));
             });
         });
     }
 }
 
-function displayExpandedArticle(feed: Feed, title: RssItem): void {
+export function displayExpandedArticle(title: RssItem): void {
     // Find the corresponding RssItem based on the title
-    const selectedRssItem = feed.items.find((item) => item.title === title.title);
+    const selectedRssItem = getState()
+        .feeds.flatMap((feed) => feed.items)
+        .find((item) => item.title === title.title);
 
     if (selectedRssItem) {
         // Store the selectedRssItem data in sessionStorage
@@ -92,4 +83,34 @@ function displayExpandedArticle(feed: Feed, title: RssItem): void {
         // Redirect to single.html
         window.location.href = "single.html";
     }
+}
+
+export function addFeedClickedEvent() {
+    // Add event listener to handle click on feed links
+    document.addEventListener("DOMContentLoaded", () => {
+        // Add click event listeners to feed links
+        const feedLinks = document.querySelectorAll(".feed-img-link, .feed-box-text a");
+        feedLinks.forEach((link) => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault(); // Prevent the default behavior of link clicks
+                const title = link.textContent || "";
+                const state = getState();
+                let selectedRssItem;
+
+                // Search for the corresponding RSS item based on the title
+                for (const feed of state.feeds) {
+                    selectedRssItem = feed.items.find((item) => item.title === title);
+                    if (selectedRssItem) {
+                        break;
+                    }
+                }
+
+                if (selectedRssItem) {
+                    displayExpandedArticle(selectedRssItem);
+                } else {
+                    console.error("Selected RSS item not found.");
+                }
+            });
+        });
+    });
 }

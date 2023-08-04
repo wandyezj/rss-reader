@@ -1,5 +1,5 @@
 import { refreshFeed } from "./State/State";
-import { displayFeed } from "./UI/displayFeed";
+import { displayFeed, displayExpandedArticle, addFeedClickedEvent } from "./UI/displayFeed";
 import { refreshFeeds } from "./refreshFeeds";
 import { registerButtonAddFeed } from "./registerButtonAddFeed";
 import { registerButtonRefresh } from "./registerButtonRefresh";
@@ -23,6 +23,7 @@ function initialize() {
     displayFeed();
     // reload all feeds
     refreshFeeds();
+    addFeedClickedEvent();
 }
 
 initialize();

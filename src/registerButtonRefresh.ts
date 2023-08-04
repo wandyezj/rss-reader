@@ -5,9 +5,12 @@ import { refreshFeeds } from "./refreshFeeds";
  * Refresh all items in the feed
  */
 export function registerButtonRefresh() {
-    const button = getButton("button-refresh");
+    const link = document.querySelector("#button-refresh");
+    if (!link) return; // Check if the link element exists
 
-    button.onclick = async function () {
+    link.addEventListener("click", async (event) => {
+        event.preventDefault();
+
         await refreshFeeds();
-    };
+    });
 }
