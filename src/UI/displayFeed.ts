@@ -78,10 +78,10 @@ export function displayExpandedArticle(title: RssItem): void {
 
     if (selectedRssItem) {
         // Store the selectedRssItem data in sessionStorage
-        sessionStorage.setItem("selectedRssItem", JSON.stringify(selectedRssItem));
+        localStorage.setItem(selectedRssItem.id, JSON.stringify(selectedRssItem));
 
         // Redirect to single.html
-        window.location.href = "single.html";
+        window.location.href = `single.html?id=${selectedRssItem.id}`;
     } else {
         console.error("Selected RSS item not found.");
         // You can display a message or handle the situation differently if the item is not found.
@@ -97,16 +97,9 @@ export function addFeedClickedEvent() {
             link.addEventListener("click", (event) => {
                 event.preventDefault(); // Prevent the default behavior of link clicks
                 const title = link.textContent || "";
-                const state = getState();
-                let selectedRssItem;
-
-                // Search for the corresponding RSS item based on the title
-                for (const feed of state.feeds) {
-                    selectedRssItem = feed.items.find((item) => item.title === title);
-                    if (selectedRssItem) {
-                        break;
-                    }
-                }
+                const selectedRssItem = getState()
+                    .feeds.flatMap((feed) => feed.items)
+                    .find((item) => item.title === title);
 
                 if (selectedRssItem) {
                     displayExpandedArticle(selectedRssItem);
