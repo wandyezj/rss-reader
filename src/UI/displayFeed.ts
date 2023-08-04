@@ -32,7 +32,7 @@ function displayFeedItems(feeds: Feed[]): void {
                 const feedBoxImg = document.createElement("div");
                 feedBoxImg.classList.add("feed-box-img");
                 const img = document.createElement("img");
-                img.src = item.image || "../UI/default-image.jpg";
+                img.src = item.image || "default-img.jpg";
                 img.alt = "feed img";
                 feedBoxImg.appendChild(img);
 
@@ -50,7 +50,7 @@ function displayFeedItems(feeds: Feed[]): void {
                 feedBoxText.classList.add("feed-box-text");
 
                 const strong = document.createElement("strong");
-                strong.textContent = "Publication Date";
+                strong.textContent = item.pubDate ? item.pubDate.substring(0, 16) : "No date";
                 feedBoxText.appendChild(strong);
 
                 const titleLink = document.createElement("a");
@@ -82,6 +82,9 @@ export function displayExpandedArticle(title: RssItem): void {
 
         // Redirect to single.html
         window.location.href = "single.html";
+    } else {
+        console.error("Selected RSS item not found.");
+        // You can display a message or handle the situation differently if the item is not found.
     }
 }
 

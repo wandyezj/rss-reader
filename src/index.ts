@@ -23,6 +23,7 @@ function initialize() {
     displayFeed();
     // reload all feeds
     refreshFeeds();
+    // Add event listeners to feed links
     addFeedClickedEvent();
 }
 
