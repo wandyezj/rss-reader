@@ -13,8 +13,7 @@
             <h1>RSS Reader</h1>
         </div>
         <img src="assets/logo.svg" alt="RSS Reader Logo" id="logo" />
-        <div id="insert"></div>
-
+        <div id="insert"></div
         <div class="container">
             <div class="sidebar">
                 <div class="search-bar">
@@ -25,7 +24,6 @@
                     <li class="active"><a href="#">Today</a></li>
                     <li><a href="#" class="unread">Unread</a></li>
                     <li><a href="#" class="read-later">Read Later</a></li>
-
                     <!-- Subscription section -->
                     <li>
                         <a href="#">Subscriptions</a>
@@ -38,13 +36,14 @@
                         </ul>
                     </li>
                 </ul>
-
+                <div class="add-feed-container">
+                    <input id="add-feed-input" type="url" placeholder="Enter RSS feed URL">
+                    <button id="add-feed-button">Add RSS Feed</button>
+                </div>
                 <div class="button-container">
                     <!-- Add Feed -->
                     <button id="button-add-feed" class="button-style">Add Feed</button>
-
                     <button id="button-refresh" class="button-style">Refresh</button>
-
                     <!-- Import Button -->
                     <label id="importButton" for="button-state-upload" class="button-style">Import JSON</label>
                     <input
@@ -54,15 +53,10 @@
                         style="display: none"
                         aria-label="Load File"
                     />
-
                     <!-- Export Button -->
                     <button id="button-state-download" class="button-style">Export JSON</button>
-                    <!-- <a href="#" download="rss-reader-state.json" id="button-state-download" class="button-style"
-                        >Export JSON</a
-                    > -->
                 </div>
             </div>
-
             <div class="articles">
                 <div class="article-list">
                     <ul class="article-items">
@@ -83,7 +77,6 @@
                     </ul>
                 </div>
             </div>
-
             <div class="expanded-article">
                 <div class="expanded-article-image"></div>
                 <h2 class="expanded-article-title">Selected Article</h2>

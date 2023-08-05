@@ -218,3 +218,23 @@ footer {
 .sidebar-menu a:hover {
     color: #555;
 }
+.add-feed-container {
+    margin-bottom: 20px;
+}
+#add-feed-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#add-feed-button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 10px;
+}
