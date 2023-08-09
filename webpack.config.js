@@ -70,6 +70,10 @@ module.exports = async (env, options) => {
                         to: "assets/default-image.jpg",
                         from: "./src/assets/default-image.jpg",
                     },
+                    {
+                        to: "single.html",
+                        from: "./src/single.html",
+                    },
                 ],
             }),
         ],
