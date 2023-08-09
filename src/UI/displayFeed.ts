@@ -32,7 +32,7 @@ function displayFeedItems(feeds: Feed[]): void {
                 const feedBoxImg = document.createElement("div");
                 feedBoxImg.classList.add("feed-box-img");
                 const img = document.createElement("img");
-                img.src = item.image || "default-img.jpg";
+                img.src = item.image || "assets/default-image.jpg";
                 img.alt = "feed img";
                 feedBoxImg.appendChild(img);
 
