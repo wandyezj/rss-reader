@@ -22,12 +22,13 @@ const rssUrls = [
  * Add a new Rss Feed
  */
 export function registerButtonAddFeed() {
-    const button = getButton("button-add-feed");
+    const link = document.querySelector("#button-add-feed");
+    if (!link) return; // Check if the link element exists
 
-    button.onclick = async function () {
+    link.addEventListener("click", async (event) => {
+        event.preventDefault();
+
         await loadRssUrls(rssUrls);
-
-        // display all loaded feeds
         displayFeed();
-    };
+    });
 }

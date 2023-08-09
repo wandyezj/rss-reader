@@ -7,87 +7,118 @@
         <meta charset="UTF-8" />
         <link rel="stylesheet" type="text/css" href="./index.css" />
         <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+
+        <!--Import the Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <!--Icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     </head>
     <body>
-        <div>
-            <h1>RSS Reader</h1>
-        </div>
-        <img src="assets/logo.svg" alt="RSS Reader Logo" id="logo" />
-        <div id="insert"></div>
-
-        <div class="container">
+        <div class="wrapper">
+            <!--Sidebar-->
             <div class="sidebar">
-                <div class="search-bar">
-                    <input type="text" placeholder="Search" />
-                </div>
+                <h2>Menu</h2>
                 <ul class="sidebar-menu">
-                    <!-- Main sidebar options -->
-                    <li class="active"><a href="#">Today</a></li>
-                    <li><a href="#" class="unread">Unread</a></li>
-                    <li><a href="#" class="read-later">Read Later</a></li>
-
-                    <!-- Subscription section -->
                     <li>
-                        <a href="#">Subscriptions</a>
-                        <ul class="subscription">
-                            <li><a href="#" class="active">News</a></li>
-                            <li><a href="#">Culture</a></li>
-                            <li><a href="#">Music</a></li>
-                            <li><a href="#">Podcasts & Shows</a></li>
-                            <!-- <li><a href="#">New Feed</a></li> -->
-                        </ul>
+                        <a href="#" class="active"><i class="fa-solid fa-earth-americas"></i> All Feeds</a>
                     </li>
-                </ul>
-
-                <div class="button-container">
-                    <!-- Add Feed -->
-                    <button id="button-add-feed" class="button-style">Add Feed</button>
-
-                    <button id="button-refresh" class="button-style">Refresh</button>
-
-                    <!-- Import Button -->
-                    <label id="importButton" for="button-state-upload" class="button-style">Import JSON</label>
-                    <input
-                        id="button-state-upload"
-                        type="file"
-                        accept=".json"
-                        style="display: none"
-                        aria-label="Load File"
-                    />
-
-                    <!-- Export Button -->
-                    <button id="button-state-download" class="button-style">Export JSON</button>
+                    <li>
+                        <a href="#"><i class="fa-solid fa-bookmark"></i> Favorites</a>
+                    </li>
+                    <li class="add-feed">
+                        <a href="#" id="button-add-feed"><i class="fa-solid fa-plus"></i> Add Feed</a>
+                    </li>
+                    <li class="refresh">
+                        <a href="#" id="button-refresh"><i class="fa-solid fa-arrows-rotate"></i> Refresh Feed</a>
+                    </li>
+                    <li class="download-json">
+                        <a href="#"><i class="fa-solid fa-download"></i> Download JSON</a>
+                    </li>
                     <!-- <a href="#" download="rss-reader-state.json" id="button-state-download" class="button-style"
-                        >Export JSON</a
-                    > -->
-                </div>
+                            >Export JSON</a> -->
+                    <li class="import-json">
+                        <label for="import-json"><i class="fa-solid fa-file-import"></i> Import JSON</label>
+                    </li>
+                    <input type="file" id="import-json" accept=".json" style="display: none" aria-label="Load File" />
+                </ul>
             </div>
 
-            <div class="articles">
-                <div class="article-list">
-                    <ul class="article-items">
-                        <li>
-                            <a href="#" class="article-link">
-                                <div class="article-content">
-                                    <div class="article-image"></div>
-                                    <div class="article-details">
-                                        <h2>Why the AI Hype Compels Me And Why These Two Major Threats ...</h2>
-                                        <p>
-                                            As artificial intelligence exerts a groundbreaking impact on our daily
-                                            lives, we are at a crossroads: adapt to create new opportunities or risk...
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <!--Feed list grid-->
+            <div class="main-content">
+                <section id="feed">
+                    <!--==headings-->
+                    <div class="feedlist-heading">
+                        <h3>Feed List</h3>
+                    </div>
 
-            <div class="expanded-article">
-                <div class="expanded-article-image"></div>
-                <h2 class="expanded-article-title">Selected Article</h2>
-                <p class="expanded-article-content">This is the content of the selected article.</p>
+                    <!--==container-->
+                    <div class="feed-box-container">
+                        <!--box-->
+                        <div class="feed-box">
+                            <div class="feed-box-img">
+                                <img src="UI/default-img.jpg" alt="feed img" />
+                                <a href="#" class="feed-img-link">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                            <div class="feed-box-text">
+                                <strong>publication Date</strong>
+                                <a href="#"> My title</a>
+                                <p>Here goes the descrition</p>
+                            </div>
+                        </div>
+
+                        <!--box-->
+                        <div class="feed-box">
+                            <div class="feed-box-img">
+                                <img src="UI/default-img.jpg" alt="feed img" />
+                                <a href="#" class="feed-img-link">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                            <div class="feed-box-text">
+                                <strong>publication Date</strong>
+                                <a href="#"> My title</a>
+                                <p>Here goes the descrition</p>
+                            </div>
+                        </div>
+
+                        <!--box-->
+                        <div class="feed-box">
+                            <div class="feed-box-img">
+                                <img src="UI/default-img.jpg" alt="feed img" />
+                                <a href="#" class="feed-img-link">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                            <div class="feed-box-text">
+                                <strong>publication Date</strong>
+                                <a href="#"> My title</a>
+                                <p>Here goes the descrition</p>
+                            </div>
+                        </div>
+
+                        <!--box-->
+                        <div class="feed-box">
+                            <div class="feed-box-img">
+                                <img src="UI/default-img.jpg" alt="feed img" />
+                                <a href="#" class="feed-img-link">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                            <div class="feed-box-text">
+                                <strong>publication Date</strong>
+                                <a href="#"> My title</a>
+                                <p>Here goes the descrition</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </body>
