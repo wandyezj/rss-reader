@@ -57,7 +57,7 @@ function parseAtomXml(data: Document): RssItem[] {
 
     for (let i = 0; i < entries.length; i++) {
         const entry = entries[i];
-        const id = getTagValue(entry, "id") || '';
+        const id = getTagValue(entry, "id") || "";
         const title = getTagValue(entry, "title");
         const pubDate = getTagValue(entry, "published");
         const image = undefined; // Atom feeds might not have images
