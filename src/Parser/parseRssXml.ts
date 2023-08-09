@@ -61,8 +61,8 @@ function parseAtomXml(data: Document): RssItem[] {
         const title = getTagValue(entry, "title");
         const pubDate = getTagValue(entry, "published");
         const image = undefined; // Atom feeds might not have images
-        const description = getTagValue(entry, "content");
-        const link = getTagValue(entry, "link");
+        const description = getFirstSentence(getTagValue(entry, "content"));
+        const link = entry.getElementsByTagName("link")[0]?.getAttribute("href") || "";
 
         const rssItem: RssItem = {
             id,
@@ -77,4 +77,12 @@ function parseAtomXml(data: Document): RssItem[] {
     }
 
     return rssItems;
+}
+
+function getFirstSentence(text: string | undefined): string | undefined {
+    if (text) {
+        const sentences = text.split(/[.!?]/);
+        return sentences[0].trim();
+    }
+    return undefined;
 }
