@@ -1,5 +1,6 @@
 import { fetchAndParseRss } from "./Parser/fetchAndParseRss";
-import { displayFeed } from "./UI/displayFeed";
+import { refreshFeed } from "./State/State";
+import { displayFeed, displayExpandedArticle, addFeedClickedEvent } from "./UI/displayFeed";
 import { refreshFeeds } from "./refreshFeeds";
 import { registerButtonAddFeed } from "./registerButtonAddFeed";
 import { registerButtonRefresh } from "./registerButtonRefresh";
@@ -24,9 +25,11 @@ function initialize() {
     displayFeed();
     // reload all feeds
     refreshFeeds();
+    // Add event listeners to feed links
+    addFeedClickedEvent();
 
     // Event listener for the "Add RSS Feed" button
-    document.getElementById("add-feed-button")?.addEventListener("click", async () => {
+    document.getElementById("button-add-feed")?.addEventListener("click", async () => {
         const urlInput = document.getElementById("add-feed-input") as HTMLInputElement;
         const url = urlInput.value.trim();
         if (url) {
