@@ -33,6 +33,11 @@ export function setState(state: State): void {
     updateState();
 }
 
+export function clearState(): void {
+    globalState = undefined;
+    localStorage.removeItem(stateKey);
+}
+
 /**
  * Get the global state.
  * get current globalState, from object, local storage, od default to starting state.

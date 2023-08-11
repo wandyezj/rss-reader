@@ -8,6 +8,8 @@ import { registerButtonStateDownload } from "./registerButtonStateDownload";
 import { registerButtonStateUpload } from "./registerButtonStateUpload";
 import { website, clock } from "./website";
 import { addFeed } from "./State/State";
+import { registerButtonAddDefaultFeeds } from "./registerButtonAddDefaultFeeds";
+import { registerButtonClearState } from "./registerButtonClearState";
 
 console.log(website());
 clock();
@@ -18,32 +20,19 @@ clock();
  */
 function initialize() {
     // Button Handlers
+    registerButtonAddDefaultFeeds();
     registerButtonAddFeed();
     registerButtonRefresh();
     registerButtonStateUpload();
     registerButtonStateDownload();
+    registerButtonClearState();
+
     displayFeed();
+
     // reload all feeds
     refreshFeeds();
+
     // Add event listeners to feed links
     addFeedClickedEvent();
-
-    // Event listener for the "Add RSS Feed" button
-    document.getElementById("button-add-feed")?.addEventListener("click", async () => {
-        const urlInput = document.getElementById("add-feed-input") as HTMLInputElement;
-        const url = urlInput.value.trim();
-        if (url) {
-            try {
-                const rssItems = await fetchAndParseRss(url);
-                addFeed(url, rssItems);
-                console.log(`RSS feed from ${url} has been added.`);
-                displayFeed(); // Refresh the feed display
-            } catch (error) {
-                console.error(`Failed to add RSS feed from ${url}:`, error);
-            }
-        } else {
-            console.error("No URL was entered.");
-        }
-    });
 }
 initialize();
