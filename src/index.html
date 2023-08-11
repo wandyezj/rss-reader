@@ -27,8 +27,11 @@
                     <li>
                         <a href="#" class="active"><i class="fa-solid fa-earth-americas"></i> All Feeds</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#"><i class="fa-solid fa-bookmark"></i> Favorites</a>
+                    </li> -->
+                    <li class="add-default-feeds">
+                        <a href="#" id="button-add-default-feeds"><i class="fa-solid fa-plus"></i> Add Default Feeds</a>
                     </li>
                     <li class="add-feed">
                         <input id="add-feed-input" type="url" placeholder="Enter RSS feed URL" />
@@ -38,14 +41,18 @@
                         <a href="#" id="button-refresh"><i class="fa-solid fa-arrows-rotate"></i> Refresh Feed</a>
                     </li>
                     <li class="download-json">
-                        <a href="#"><i class="fa-solid fa-download"></i> Download JSON</a>
+                        <a href="#"><i class="fa-solid fa-download"></i> Download State</a>
                     </li>
                     <!-- <a href="#" download="rss-reader-state.json" id="button-state-download" class="button-style"
                             >Export JSON</a> -->
                     <li class="import-json">
-                        <label for="import-json"><i class="fa-solid fa-file-import"></i> Import JSON</label>
+                        <label for="import-json"><i class="fa-solid fa-file-import"></i> Import State</label>
                     </li>
                     <input type="file" id="import-json" accept=".json" style="display: none" aria-label="Load File" />
+
+                    <li id="button-clear-state">
+                        <a href="#"><i class="fa-solid fa-eraser"></i> Clear State</a>
+                    </li>
                 </ul>
             </div>
 
