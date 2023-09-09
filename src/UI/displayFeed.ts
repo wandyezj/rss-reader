@@ -50,20 +50,25 @@ function createFeedItem(item: RssItem) {
 
     const feedBoxImg = document.createElement("div");
     feedBoxImg.classList.add("feed-box-img");
-    const img = document.createElement("img");
-    img.src = image || "assets/default-image.jpg";
-    img.alt = "feed img";
-    feedBoxImg.appendChild(img);
+
+    // Picture
+    const imgElement = document.createElement("img");
+    imgElement.src = image || "assets/default-image.jpg";
+    imgElement.alt = "feed img";
 
     if (link) {
-        const feedImgLink = document.createElement("a");
-        feedImgLink.href = link;
-        feedImgLink.classList.add("feed-img-link");
+        const aElement = document.createElement("a");
+        aElement.target = "_blank";
+        aElement.href = link;
+        aElement.classList.add("feed-img-link");
+
         const arrowIcon = document.createElement("i");
         arrowIcon.classList.add("fa-solid", "fa-arrow-up-right-from-square");
-        feedImgLink.appendChild(arrowIcon);
-        feedBoxImg.appendChild(feedImgLink);
+        aElement.appendChild(arrowIcon);
+        feedBoxImg.appendChild(aElement);
     }
+
+    feedBoxImg.appendChild(imgElement);
     feedBox.appendChild(feedBoxImg);
 
     const feedBoxText = document.createElement("div");
@@ -75,6 +80,7 @@ function createFeedItem(item: RssItem) {
 
     if (link) {
         const titleLink = document.createElement("a");
+        titleLink.target = "_blank";
         titleLink.href = link;
         titleLink.textContent = item.title || "";
         feedBoxText.appendChild(titleLink);
@@ -103,52 +109,4 @@ function makeDescriptionPretty(description: string): string {
     });
 
     return newDescription;
-}
-
-export function displayExpandedArticle(title: RssItem): void {
-    // Find the corresponding RssItem based on the title
-    const selectedRssItem = getState()
-        .feeds.flatMap((feed) => feed.items)
-        .find((item) => item.title === title.title);
-
-    if (selectedRssItem) {
-        // Store the selectedRssItem data in sessionStorage
-        localStorage.setItem(selectedRssItem.id, JSON.stringify(selectedRssItem));
-
-        const { link } = selectedRssItem;
-        if (link) {
-            console.log(`Selected RSS Item ${selectedRssItem.id} open link ${link}`);
-            debugger;
-            // Redirect to article link
-            window.location.href = link;
-        } else {
-            console.warn(`Selected RSS Item ${selectedRssItem.id} does not have link`);
-        }
-    } else {
-        console.error(`Selected RSS item not found.`);
-        // You can display a message or handle the situation differently if the item is not found.
-    }
-}
-
-export function addFeedClickedEvent() {
-    // Add event listener to handle click on feed links
-    document.addEventListener("DOMContentLoaded", () => {
-        // Add click event listeners to feed links
-        const feedLinks = document.querySelectorAll(".feed-img-link, .feed-box-text a");
-        feedLinks.forEach((link) => {
-            link.addEventListener("click", (event) => {
-                event.preventDefault(); // Prevent the default behavior of link clicks
-                const title = link.textContent || "";
-                const selectedRssItem = getState()
-                    .feeds.flatMap((feed) => feed.items)
-                    .find((item) => item.title === title);
-
-                if (selectedRssItem) {
-                    displayExpandedArticle(selectedRssItem);
-                } else {
-                    console.error("Selected RSS item not found.");
-                }
-            });
-        });
-    });
 }

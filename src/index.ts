@@ -1,4 +1,4 @@
-import { displayFeed, addFeedClickedEvent } from "./UI/displayFeed";
+import { displayFeed } from "./UI/displayFeed";
 import { refreshFeeds } from "./refreshFeeds";
 import { registerButtonAddFeed } from "./registerButtonAddFeed";
 import { registerButtonRefresh } from "./registerButtonRefresh";
@@ -24,9 +24,6 @@ function initialize() {
 
     // reload all feeds
     refreshFeeds();
-
-    // Add event listeners to feed links
-    addFeedClickedEvent();
 }
 
 initialize();
