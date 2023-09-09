@@ -45,11 +45,15 @@ function displayFeedItems(feeds: Feed[]): void {
 function createFeedItem(item: RssItem) {
     const { image, link } = item;
 
-    const feedBox = document.createElement("div");
-    feedBox.classList.add("feed-box");
+    // Item Div
+    // - Image Div
+    // - Text Div
+    const itemDiv = document.createElement("div");
+    itemDiv.classList.add("feed-box");
 
-    const feedBoxImg = document.createElement("div");
-    feedBoxImg.classList.add("feed-box-img");
+    // Image Div
+    const imageDiv = document.createElement("div");
+    imageDiv.classList.add("feed-box-img");
 
     // Picture
     const imgElement = document.createElement("img");
@@ -64,35 +68,42 @@ function createFeedItem(item: RssItem) {
 
         const arrowIcon = document.createElement("i");
         arrowIcon.classList.add("fa-solid", "fa-arrow-up-right-from-square");
+
         aElement.appendChild(arrowIcon);
-        feedBoxImg.appendChild(aElement);
+        imageDiv.appendChild(aElement);
     }
 
-    feedBoxImg.appendChild(imgElement);
-    feedBox.appendChild(feedBoxImg);
+    imageDiv.appendChild(imgElement);
+    itemDiv.appendChild(imageDiv);
 
-    const feedBoxText = document.createElement("div");
-    feedBoxText.classList.add("feed-box-text");
+    // Text Div contains
+    // - Date
+    // - Title
+    // - Description
+    const textDiv = document.createElement("div");
+    textDiv.classList.add("feed-box-text");
 
+    // Date
     const strong = document.createElement("strong");
     strong.textContent = item.pubDate ? item.pubDate.substring(0, 16) : "No date";
-    feedBoxText.appendChild(strong);
+    textDiv.appendChild(strong);
 
+    // Title
+    const aElement = document.createElement("a");
     if (link) {
-        const titleLink = document.createElement("a");
-        titleLink.target = "_blank";
-        titleLink.href = link;
-        titleLink.textContent = item.title || "";
-        feedBoxText.appendChild(titleLink);
+        aElement.target = "_blank";
+        aElement.href = link;
     }
+    aElement.textContent = item.title || "";
+    textDiv.appendChild(aElement);
 
     // Description
     const description = document.createElement("p");
     description.textContent = makeDescriptionPretty(item.description || "No Description");
-    feedBoxText.appendChild(description);
+    textDiv.appendChild(description);
 
-    feedBox.appendChild(feedBoxText);
-    return feedBox;
+    itemDiv.appendChild(textDiv);
+    return itemDiv;
 }
 
 function makeDescriptionPretty(description: string): string {
